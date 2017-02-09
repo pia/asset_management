@@ -17,6 +17,23 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    self.window=[[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    [self.window makeKeyAndVisible];
+    
+    ViewController *viewLeft=[[ViewController alloc] init];
+    CamViewController *viewRight=[[CamViewController alloc] init];
+    viewLeft.view.backgroundColor=[UIColor whiteColor];
+    viewRight.view.backgroundColor=[UIColor grayColor];
+    viewLeft.title=@"资产管理";
+    viewRight.title=@"扫一扫";
+    
+    NSArray *tabBarArray=[NSArray arrayWithObjects:viewLeft,viewRight, nil];
+    UITabBarController *bottomController=[[UITabBarController alloc] init];
+    bottomController.viewControllers=tabBarArray;
+    self.window.rootViewController=bottomController;
+    
+    bottomController.delegate=self;
+    
     return YES;
 }
 

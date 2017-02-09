@@ -7,6 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ViewController.h"
+#import "CamViewController.h"
+
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 

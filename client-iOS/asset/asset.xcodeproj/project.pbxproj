@@ -13,6 +13,7 @@
 		A44A751E1E4C48380084EF3D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A44A751C1E4C48380084EF3D /* Main.storyboard */; };
 		A44A75201E4C48380084EF3D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A44A751F1E4C48380084EF3D /* Assets.xcassets */; };
 		A44A75231E4C48380084EF3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A44A75211E4C48380084EF3D /* LaunchScreen.storyboard */; };
+		A44A752C1E4C4FDC0084EF3D /* CamViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A44A752B1E4C4FDC0084EF3D /* CamViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,8 @@
 		A44A751F1E4C48380084EF3D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A44A75221E4C48380084EF3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A44A75241E4C48380084EF3D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A44A752A1E4C4FDC0084EF3D /* CamViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CamViewController.h; sourceTree = "<group>"; };
+		A44A752B1E4C4FDC0084EF3D /* CamViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CamViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +65,8 @@
 				A44A75171E4C48380084EF3D /* AppDelegate.m */,
 				A44A75191E4C48380084EF3D /* ViewController.h */,
 				A44A751A1E4C48380084EF3D /* ViewController.m */,
+				A44A752A1E4C4FDC0084EF3D /* CamViewController.h */,
+				A44A752B1E4C4FDC0084EF3D /* CamViewController.m */,
 				A44A751C1E4C48380084EF3D /* Main.storyboard */,
 				A44A751F1E4C48380084EF3D /* Assets.xcassets */,
 				A44A75211E4C48380084EF3D /* LaunchScreen.storyboard */,
@@ -153,6 +158,7 @@
 			files = (
 				A44A751B1E4C48380084EF3D /* ViewController.m in Sources */,
 				A44A75181E4C48380084EF3D /* AppDelegate.m in Sources */,
+				A44A752C1E4C4FDC0084EF3D /* CamViewController.m in Sources */,
 				A44A75151E4C48380084EF3D /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

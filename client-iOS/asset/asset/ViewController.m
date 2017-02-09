@@ -17,7 +17,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-}
+    UIButton *btn=[UIButton buttonWithType:UIButtonTypeRoundedRect];
+    [btn setTitle:@"test" forState:UIControlStateNormal];
+    btn.frame=CGRectMake(20, 50, 80, 40);
+    [self.view addSubview:btn];}
 
 
 - (void)didReceiveMemoryWarning {
