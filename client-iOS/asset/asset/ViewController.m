@@ -17,10 +17,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    UIButton *btn=[UIButton buttonWithType:UIButtonTypeRoundedRect];
-    [btn setTitle:@"test" forState:UIControlStateNormal];
-    btn.frame=CGRectMake(20, 50, 80, 40);
-    [self.view addSubview:btn];}
+    //UIImage *cameraIcon = [[UIImage imageNamed:@"camera@3x.png"] imageWithRenderingMode:UIImageRenderingModeAutomatic];
+//    UITabBarItem *leftTabItem=[[UITabBarItem alloc] initWithTabBarSystemItem:UITabBarSystemItemSearch tag:404];
+//    self.tabBarItem=leftTabItem;
+    UIImage *searchIcon = [[UIImage imageNamed:@"search@2x.png"] imageWithRenderingMode:UIImageRenderingModeAutomatic];
+    UITabBarItem *leftTabItem=[[UITabBarItem alloc] initWithTitle:@"." image:searchIcon tag:10];
+    self.tabBarItem=leftTabItem;
+}
 
 
 - (void)didReceiveMemoryWarning {

@@ -24,7 +24,7 @@
     CamViewController *viewRight=[[CamViewController alloc] init];
     viewLeft.view.backgroundColor=[UIColor whiteColor];
     viewRight.view.backgroundColor=[UIColor grayColor];
-    viewLeft.title=@"资产管理";
+    viewLeft.title=@"搜索";
     viewRight.title=@"扫一扫";
     
     NSArray *tabBarArray=[NSArray arrayWithObjects:viewLeft,viewRight, nil];
@@ -32,7 +32,6 @@
     bottomController.viewControllers=tabBarArray;
     self.window.rootViewController=bottomController;
     
-    bottomController.delegate=self;
     
     return YES;
 }

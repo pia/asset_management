@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		800648681E4EEA210075C3C2 /* camera@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 800648641E4EEA210075C3C2 /* camera@2x.png */; };
+		800648691E4EEA210075C3C2 /* camera@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 800648651E4EEA210075C3C2 /* camera@3x.png */; };
+		8006486A1E4EEA210075C3C2 /* camera_512.png in Resources */ = {isa = PBXBuildFile; fileRef = 800648661E4EEA210075C3C2 /* camera_512.png */; };
+		8006486B1E4EEA210075C3C2 /* Contents.json in Resources */ = {isa = PBXBuildFile; fileRef = 800648671E4EEA210075C3C2 /* Contents.json */; };
+		8006486E1E4EEDC20075C3C2 /* search@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8006486D1E4EEDC20075C3C2 /* search@2x.png */; };
 		A44A75151E4C48380084EF3D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A44A75141E4C48380084EF3D /* main.m */; };
 		A44A75181E4C48380084EF3D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A44A75171E4C48380084EF3D /* AppDelegate.m */; };
 		A44A751B1E4C48380084EF3D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A44A751A1E4C48380084EF3D /* ViewController.m */; };
@@ -17,6 +22,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		800648641E4EEA210075C3C2 /* camera@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "camera@2x.png"; sourceTree = "<group>"; };
+		800648651E4EEA210075C3C2 /* camera@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "camera@3x.png"; sourceTree = "<group>"; };
+		800648661E4EEA210075C3C2 /* camera_512.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = camera_512.png; sourceTree = "<group>"; };
+		800648671E4EEA210075C3C2 /* Contents.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Contents.json; sourceTree = "<group>"; };
+		8006486D1E4EEDC20075C3C2 /* search@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "search@2x.png"; sourceTree = "<group>"; };
 		A44A75101E4C48380084EF3D /* asset.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = asset.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A44A75141E4C48380084EF3D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A44A75161E4C48380084EF3D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -42,6 +52,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		800648631E4EEA210075C3C2 /* camera.imageset */ = {
+			isa = PBXGroup;
+			children = (
+				800648641E4EEA210075C3C2 /* camera@2x.png */,
+				800648651E4EEA210075C3C2 /* camera@3x.png */,
+				800648661E4EEA210075C3C2 /* camera_512.png */,
+				800648671E4EEA210075C3C2 /* Contents.json */,
+			);
+			path = camera.imageset;
+			sourceTree = "<group>";
+		};
+		8006486C1E4EEDC20075C3C2 /* search */ = {
+			isa = PBXGroup;
+			children = (
+				8006486D1E4EEDC20075C3C2 /* search@2x.png */,
+			);
+			path = search;
+			sourceTree = "<group>";
+		};
 		A44A75071E4C48380084EF3D = {
 			isa = PBXGroup;
 			children = (
@@ -61,6 +90,7 @@
 		A44A75121E4C48380084EF3D /* asset */ = {
 			isa = PBXGroup;
 			children = (
+				A4D6B6701E4D808B00CA4883 /* resources */,
 				A44A75161E4C48380084EF3D /* AppDelegate.h */,
 				A44A75171E4C48380084EF3D /* AppDelegate.m */,
 				A44A75191E4C48380084EF3D /* ViewController.h */,
@@ -82,6 +112,15 @@
 				A44A75141E4C48380084EF3D /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A4D6B6701E4D808B00CA4883 /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				8006486C1E4EEDC20075C3C2 /* search */,
+				800648631E4EEA210075C3C2 /* camera.imageset */,
+			);
+			path = resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -143,9 +182,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8006486E1E4EEDC20075C3C2 /* search@2x.png in Resources */,
 				A44A75231E4C48380084EF3D /* LaunchScreen.storyboard in Resources */,
+				800648691E4EEA210075C3C2 /* camera@3x.png in Resources */,
 				A44A75201E4C48380084EF3D /* Assets.xcassets in Resources */,
+				8006486A1E4EEA210075C3C2 /* camera_512.png in Resources */,
 				A44A751E1E4C48380084EF3D /* Main.storyboard in Resources */,
+				800648681E4EEA210075C3C2 /* camera@2x.png in Resources */,
+				8006486B1E4EEA210075C3C2 /* Contents.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -318,6 +362,7 @@
 				A44A75291E4C48380084EF3D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

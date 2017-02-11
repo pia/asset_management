@@ -2,8 +2,8 @@
 //  CamViewController.m
 //  asset
 //
-//  Created by sun on 09/02/2017.
-//  Copyright © 2017 sun. All rights reserved.
+//  Created by sun on 09/02/2017./var/folders/jm/x7w81ss90wzdrsmx97swch8r0000gn/T/AppIconMaker/appicon.png/var/folders/jm/x7w81ss90wzdrsmx97swch8r0000gn/T/AppIconMaker/appicon.png
+//  Copyright © 2017 sun. All rights reserved./var/folders/jm/x7w81/var/folders/jm/x7w81ss90wzdrsmx97swch8r0000gn/T/AppIconMaker/appicon.pngss90wzdrsmx97swch8r0000gn/T/AppIconMaker/appicon.png
 //
 
 #import "CamViewController.h"
@@ -17,10 +17,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    UIButton *btn=[UIButton buttonWithType:UIButtonTypeRoundedRect];
-    [btn setTitle:@"test" forState:UIControlStateNormal];
-    btn.frame=CGRectMake(20, 50, 80, 40);
-    [self.view addSubview:btn];
+    UIImage *cameraIcon = [[UIImage imageNamed:@"camera@3x.png"] imageWithRenderingMode:UIImageRenderingModeAutomatic];
+    UITabBarItem *rightTabItem=[[UITabBarItem alloc] initWithTitle:@"." image:cameraIcon tag:110];
+    self.tabBarItem=rightTabItem;
 }
 
 - (void)didReceiveMemoryWarning {
