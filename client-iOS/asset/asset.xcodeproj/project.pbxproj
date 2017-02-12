@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		79B8CF1A471C6995ED94B90E /* libPods-asset.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6ABAF4434C027095CDD24E8A /* libPods-asset.a */; };
 		800648681E4EEA210075C3C2 /* camera@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 800648641E4EEA210075C3C2 /* camera@2x.png */; };
 		800648691E4EEA210075C3C2 /* camera@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 800648651E4EEA210075C3C2 /* camera@3x.png */; };
 		8006486A1E4EEA210075C3C2 /* camera_512.png in Resources */ = {isa = PBXBuildFile; fileRef = 800648661E4EEA210075C3C2 /* camera_512.png */; };
@@ -15,30 +16,31 @@
 		A44A75151E4C48380084EF3D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A44A75141E4C48380084EF3D /* main.m */; };
 		A44A75181E4C48380084EF3D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A44A75171E4C48380084EF3D /* AppDelegate.m */; };
 		A44A751B1E4C48380084EF3D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A44A751A1E4C48380084EF3D /* ViewController.m */; };
-		A44A751E1E4C48380084EF3D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A44A751C1E4C48380084EF3D /* Main.storyboard */; };
 		A44A75201E4C48380084EF3D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A44A751F1E4C48380084EF3D /* Assets.xcassets */; };
 		A44A75231E4C48380084EF3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A44A75211E4C48380084EF3D /* LaunchScreen.storyboard */; };
 		A44A752C1E4C4FDC0084EF3D /* CamViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A44A752B1E4C4FDC0084EF3D /* CamViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6ABAF4434C027095CDD24E8A /* libPods-asset.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-asset.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		800648641E4EEA210075C3C2 /* camera@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "camera@2x.png"; sourceTree = "<group>"; };
 		800648651E4EEA210075C3C2 /* camera@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "camera@3x.png"; sourceTree = "<group>"; };
 		800648661E4EEA210075C3C2 /* camera_512.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = camera_512.png; sourceTree = "<group>"; };
 		800648671E4EEA210075C3C2 /* Contents.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Contents.json; sourceTree = "<group>"; };
 		8006486D1E4EEDC20075C3C2 /* search@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "search@2x.png"; sourceTree = "<group>"; };
+		846AF28740AE5514A79A53AD /* Pods-asset.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-asset.release.xcconfig"; path = "Pods/Target Support Files/Pods-asset/Pods-asset.release.xcconfig"; sourceTree = "<group>"; };
 		A44A75101E4C48380084EF3D /* asset.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = asset.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A44A75141E4C48380084EF3D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A44A75161E4C48380084EF3D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A44A75171E4C48380084EF3D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		A44A75191E4C48380084EF3D /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		A44A751A1E4C48380084EF3D /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		A44A751D1E4C48380084EF3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A44A751F1E4C48380084EF3D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A44A75221E4C48380084EF3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A44A75241E4C48380084EF3D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A44A752A1E4C4FDC0084EF3D /* CamViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CamViewController.h; sourceTree = "<group>"; };
 		A44A752B1E4C4FDC0084EF3D /* CamViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CamViewController.m; sourceTree = "<group>"; };
+		E446E1C173D876EB33618386 /* Pods-asset.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-asset.debug.xcconfig"; path = "Pods/Target Support Files/Pods-asset/Pods-asset.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,12 +48,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79B8CF1A471C6995ED94B90E /* libPods-asset.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		55E54E25F55A81948C7D295A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6ABAF4434C027095CDD24E8A /* libPods-asset.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		800648631E4EEA210075C3C2 /* camera.imageset */ = {
 			isa = PBXGroup;
 			children = (
@@ -76,6 +87,8 @@
 			children = (
 				A44A75121E4C48380084EF3D /* asset */,
 				A44A75111E4C48380084EF3D /* Products */,
+				C7EB65FAECC433D8D3401984 /* Pods */,
+				55E54E25F55A81948C7D295A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,7 +110,6 @@
 				A44A751A1E4C48380084EF3D /* ViewController.m */,
 				A44A752A1E4C4FDC0084EF3D /* CamViewController.h */,
 				A44A752B1E4C4FDC0084EF3D /* CamViewController.m */,
-				A44A751C1E4C48380084EF3D /* Main.storyboard */,
 				A44A751F1E4C48380084EF3D /* Assets.xcassets */,
 				A44A75211E4C48380084EF3D /* LaunchScreen.storyboard */,
 				A44A75241E4C48380084EF3D /* Info.plist */,
@@ -123,6 +135,15 @@
 			path = resources;
 			sourceTree = "<group>";
 		};
+		C7EB65FAECC433D8D3401984 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E446E1C173D876EB33618386 /* Pods-asset.debug.xcconfig */,
+				846AF28740AE5514A79A53AD /* Pods-asset.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -130,9 +151,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A44A75271E4C48380084EF3D /* Build configuration list for PBXNativeTarget "asset" */;
 			buildPhases = (
+				B6D5FF7B9CA0981E4E51C64D /* [CP] Check Pods Manifest.lock */,
 				A44A750C1E4C48380084EF3D /* Sources */,
 				A44A750D1E4C48380084EF3D /* Frameworks */,
 				A44A750E1E4C48380084EF3D /* Resources */,
+				0A3521EF55CEBA5EFFFD19D2 /* [CP] Embed Pods Frameworks */,
+				B7CF54A94C3A7267F982C5FC /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -187,13 +211,60 @@
 				800648691E4EEA210075C3C2 /* camera@3x.png in Resources */,
 				A44A75201E4C48380084EF3D /* Assets.xcassets in Resources */,
 				8006486A1E4EEA210075C3C2 /* camera_512.png in Resources */,
-				A44A751E1E4C48380084EF3D /* Main.storyboard in Resources */,
 				800648681E4EEA210075C3C2 /* camera@2x.png in Resources */,
 				8006486B1E4EEA210075C3C2 /* Contents.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0A3521EF55CEBA5EFFFD19D2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-asset/Pods-asset-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B6D5FF7B9CA0981E4E51C64D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		B7CF54A94C3A7267F982C5FC /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-asset/Pods-asset-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A44A750C1E4C48380084EF3D /* Sources */ = {
@@ -210,14 +281,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		A44A751C1E4C48380084EF3D /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A44A751D1E4C48380084EF3D /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		A44A75211E4C48380084EF3D /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -321,6 +384,7 @@
 		};
 		A44A75281E4C48380084EF3D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E446E1C173D876EB33618386 /* Pods-asset.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = HYC6V2835U;
@@ -333,6 +397,7 @@
 		};
 		A44A75291E4C48380084EF3D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 846AF28740AE5514A79A53AD /* Pods-asset.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = HYC6V2835U;

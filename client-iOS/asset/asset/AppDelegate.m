@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import <Chameleon.h>
 
 @interface AppDelegate ()
 
@@ -20,19 +21,20 @@
     self.window=[[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     [self.window makeKeyAndVisible];
     
+    self.tabController = [[UITabBarController alloc] init];
+    
     ViewController *viewLeft=[[ViewController alloc] init];
     CamViewController *viewRight=[[CamViewController alloc] init];
-    viewLeft.view.backgroundColor=[UIColor whiteColor];
-    viewRight.view.backgroundColor=[UIColor grayColor];
+    viewLeft.view.backgroundColor=[UIColor flatWhiteColor];
+    viewRight.view.backgroundColor=[UIColor flatYellowColor];
     viewLeft.title=@"搜索";
     viewRight.title=@"扫一扫";
-    
-    NSArray *tabBarArray=[NSArray arrayWithObjects:viewLeft,viewRight, nil];
-    UITabBarController *bottomController=[[UITabBarController alloc] init];
-    bottomController.viewControllers=tabBarArray;
-    self.window.rootViewController=bottomController;
-    
-    
+    //分别管理两个不同的栈
+    UINavigationController *naviFirst = [[UINavigationController alloc] initWithRootViewController:viewLeft];
+    UINavigationController *naviSecond = [[UINavigationController alloc] initWithRootViewController:viewRight];
+    self.tabController.viewControllers = @[naviFirst,naviSecond];
+    self.window.rootViewController = self.tabController;
+
     return YES;
 }
 

@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import <Chameleon.h>
 
 @interface ViewController ()
 
@@ -19,13 +20,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    
+
 #pragma mark tabBar -
 //    UIImage *cameraIcon = [[UIImage imageNamed:@"camera@3x.png"] imageWithRenderingMode:UIImageRenderingModeAutomatic];
 //    UITabBarItem *leftTabItem=[[UITabBarItem alloc] initWithTabBarSystemItem:UITabBarSystemItemSearch tag:404];
 //    self.tabBarItem=leftTabItem;
     UIImage *searchIcon = [[UIImage imageNamed:@"search@2x.png"] imageWithRenderingMode:UIImageRenderingModeAutomatic];
-    UITabBarItem *leftTabItem=[[UITabBarItem alloc] initWithTitle:@"." image:searchIcon tag:1];
+    UITabBarItem *leftTabItem=[[UITabBarItem alloc] initWithTitle:@"搜索" image:searchIcon tag:1];
     self.tabBarItem=leftTabItem;
     
 #pragma mark searchField -
@@ -37,16 +38,21 @@
     self.searchTextbox.returnKeyType =UIReturnKeySearch;
     [self.view addSubview:self.searchTextbox];
     self.searchTextbox.delegate=self;
+    
+    
 }
+
+
 
 - (BOOL)textFieldShouldEndEditing:(UITextField *)textField{
     NSLog(@"%@",self.searchTextbox.text);
     return YES;
 }
 
-//点屏幕空白处收回键盘
+//点屏幕空白处收回键盘 | 开始搜索
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
     [self.searchTextbox resignFirstResponder];
+    //[self.tabBarController ]
 }
 
 - (void)didReceiveMemoryWarning {

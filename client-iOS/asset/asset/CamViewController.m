@@ -7,6 +7,7 @@
 //
 
 #import "CamViewController.h"
+#import <Chameleon.h>
 
 @interface CamViewController ()
 
@@ -18,8 +19,9 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     UIImage *cameraIcon = [[UIImage imageNamed:@"camera@3x.png"] imageWithRenderingMode:UIImageRenderingModeAutomatic];
-    UITabBarItem *rightTabItem=[[UITabBarItem alloc] initWithTitle:@"." image:cameraIcon tag:2];
+    UITabBarItem *rightTabItem=[[UITabBarItem alloc] initWithTitle:@"扫一扫" image:cameraIcon tag:2];
     self.tabBarItem=rightTabItem;
+    
 }
 
 - (void)didReceiveMemoryWarning {
