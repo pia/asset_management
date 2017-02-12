@@ -8,6 +8,18 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol InfodataSource <NSObject>
+
+@property (strong,nonatomic) NSMutableDictionary *dicInfo;
+
+@required
+- (void)receiveData;
+- (void)parseData;
+
+@end
+
+//-------------------------------------------------------
+
 @interface InfoViewController : UIViewController
 
 @property (retain,nonatomic) NSString *_text;

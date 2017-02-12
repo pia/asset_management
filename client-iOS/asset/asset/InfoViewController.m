@@ -8,6 +8,7 @@
 
 #import "InfoViewController.h"
 #import <Chameleon.h>
+#import "DataProvider.h"
 
 @interface InfoViewController ()
 
@@ -21,6 +22,10 @@
     self.view.backgroundColor=[UIColor flatWhiteColor];
     self.title=@"结果";
     NSLog(@"assetID is %@",self._text);
+    
+    DataProvider *mProvider=[[DataProvider alloc] init];
+    [mProvider parseData];
+    NSLog(@"user is %@",[mProvider.dicInfo objectForKey:@"name"]);
     
 }
 
