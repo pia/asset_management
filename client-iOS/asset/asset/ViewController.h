@@ -13,6 +13,7 @@
 }
 
 @property (retain,nonatomic) UITextField *searchTextbox;
+@property (copy,nonatomic) NSString *assetID;
 
 @end
 

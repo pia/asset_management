@@ -13,6 +13,7 @@
 		8006486A1E4EEA210075C3C2 /* camera_512.png in Resources */ = {isa = PBXBuildFile; fileRef = 800648661E4EEA210075C3C2 /* camera_512.png */; };
 		8006486B1E4EEA210075C3C2 /* Contents.json in Resources */ = {isa = PBXBuildFile; fileRef = 800648671E4EEA210075C3C2 /* Contents.json */; };
 		8006486E1E4EEDC20075C3C2 /* search@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8006486D1E4EEDC20075C3C2 /* search@2x.png */; };
+		80DDE2741E50267C000FAD5B /* InfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 80DDE2731E50267C000FAD5B /* InfoViewController.m */; };
 		A44A75151E4C48380084EF3D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A44A75141E4C48380084EF3D /* main.m */; };
 		A44A75181E4C48380084EF3D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A44A75171E4C48380084EF3D /* AppDelegate.m */; };
 		A44A751B1E4C48380084EF3D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A44A751A1E4C48380084EF3D /* ViewController.m */; };
@@ -28,6 +29,8 @@
 		800648661E4EEA210075C3C2 /* camera_512.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = camera_512.png; sourceTree = "<group>"; };
 		800648671E4EEA210075C3C2 /* Contents.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Contents.json; sourceTree = "<group>"; };
 		8006486D1E4EEDC20075C3C2 /* search@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "search@2x.png"; sourceTree = "<group>"; };
+		80DDE2721E50267C000FAD5B /* InfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfoViewController.h; sourceTree = "<group>"; };
+		80DDE2731E50267C000FAD5B /* InfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfoViewController.m; sourceTree = "<group>"; };
 		846AF28740AE5514A79A53AD /* Pods-asset.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-asset.release.xcconfig"; path = "Pods/Target Support Files/Pods-asset/Pods-asset.release.xcconfig"; sourceTree = "<group>"; };
 		A44A75101E4C48380084EF3D /* asset.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = asset.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A44A75141E4C48380084EF3D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -110,6 +113,8 @@
 				A44A751A1E4C48380084EF3D /* ViewController.m */,
 				A44A752A1E4C4FDC0084EF3D /* CamViewController.h */,
 				A44A752B1E4C4FDC0084EF3D /* CamViewController.m */,
+				80DDE2721E50267C000FAD5B /* InfoViewController.h */,
+				80DDE2731E50267C000FAD5B /* InfoViewController.m */,
 				A44A751F1E4C48380084EF3D /* Assets.xcassets */,
 				A44A75211E4C48380084EF3D /* LaunchScreen.storyboard */,
 				A44A75241E4C48380084EF3D /* Info.plist */,
@@ -274,6 +279,7 @@
 				A44A751B1E4C48380084EF3D /* ViewController.m in Sources */,
 				A44A75181E4C48380084EF3D /* AppDelegate.m in Sources */,
 				A44A752C1E4C4FDC0084EF3D /* CamViewController.m in Sources */,
+				80DDE2741E50267C000FAD5B /* InfoViewController.m in Sources */,
 				A44A75151E4C48380084EF3D /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
