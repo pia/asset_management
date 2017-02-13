@@ -34,6 +34,7 @@
 		80DDE2731E50267C000FAD5B /* InfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfoViewController.m; sourceTree = "<group>"; };
 		80DDE2751E508808000FAD5B /* DataProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataProvider.h; sourceTree = "<group>"; };
 		80DDE2761E508808000FAD5B /* DataProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataProvider.m; sourceTree = "<group>"; };
+		80DDE29B1E516CBF000FAD5B /* ConfigurationTemplate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfigurationTemplate.h; sourceTree = "<group>"; };
 		846AF28740AE5514A79A53AD /* Pods-asset.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-asset.release.xcconfig"; path = "Pods/Target Support Files/Pods-asset/Pods-asset.release.xcconfig"; sourceTree = "<group>"; };
 		A44A75101E4C48380084EF3D /* asset.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = asset.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A44A75141E4C48380084EF3D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -110,6 +111,7 @@
 			isa = PBXGroup;
 			children = (
 				A4D6B6701E4D808B00CA4883 /* resources */,
+				80DDE29B1E516CBF000FAD5B /* ConfigurationTemplate.h */,
 				A44A75161E4C48380084EF3D /* AppDelegate.h */,
 				A44A75171E4C48380084EF3D /* AppDelegate.m */,
 				A44A75191E4C48380084EF3D /* ViewController.h */,
