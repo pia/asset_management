@@ -8,11 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		79B8CF1A471C6995ED94B90E /* libPods-asset.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6ABAF4434C027095CDD24E8A /* libPods-asset.a */; };
-		800648681E4EEA210075C3C2 /* camera@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 800648641E4EEA210075C3C2 /* camera@2x.png */; };
-		800648691E4EEA210075C3C2 /* camera@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 800648651E4EEA210075C3C2 /* camera@3x.png */; };
-		8006486A1E4EEA210075C3C2 /* camera_512.png in Resources */ = {isa = PBXBuildFile; fileRef = 800648661E4EEA210075C3C2 /* camera_512.png */; };
-		8006486B1E4EEA210075C3C2 /* Contents.json in Resources */ = {isa = PBXBuildFile; fileRef = 800648671E4EEA210075C3C2 /* Contents.json */; };
-		8006486E1E4EEDC20075C3C2 /* search@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8006486D1E4EEDC20075C3C2 /* search@2x.png */; };
 		80DDE2741E50267C000FAD5B /* InfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 80DDE2731E50267C000FAD5B /* InfoViewController.m */; };
 		80DDE2771E508808000FAD5B /* DataProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 80DDE2761E508808000FAD5B /* DataProvider.m */; };
 		A44A75151E4C48380084EF3D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A44A75141E4C48380084EF3D /* main.m */; };
@@ -25,11 +20,6 @@
 
 /* Begin PBXFileReference section */
 		6ABAF4434C027095CDD24E8A /* libPods-asset.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-asset.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		800648641E4EEA210075C3C2 /* camera@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "camera@2x.png"; sourceTree = "<group>"; };
-		800648651E4EEA210075C3C2 /* camera@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "camera@3x.png"; sourceTree = "<group>"; };
-		800648661E4EEA210075C3C2 /* camera_512.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = camera_512.png; sourceTree = "<group>"; };
-		800648671E4EEA210075C3C2 /* Contents.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Contents.json; sourceTree = "<group>"; };
-		8006486D1E4EEDC20075C3C2 /* search@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "search@2x.png"; sourceTree = "<group>"; };
 		80DDE2721E50267C000FAD5B /* InfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfoViewController.h; sourceTree = "<group>"; };
 		80DDE2731E50267C000FAD5B /* InfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfoViewController.m; sourceTree = "<group>"; };
 		80DDE2751E508808000FAD5B /* DataProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataProvider.h; sourceTree = "<group>"; };
@@ -70,25 +60,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		800648631E4EEA210075C3C2 /* camera.imageset */ = {
-			isa = PBXGroup;
-			children = (
-				800648641E4EEA210075C3C2 /* camera@2x.png */,
-				800648651E4EEA210075C3C2 /* camera@3x.png */,
-				800648661E4EEA210075C3C2 /* camera_512.png */,
-				800648671E4EEA210075C3C2 /* Contents.json */,
-			);
-			path = camera.imageset;
-			sourceTree = "<group>";
-		};
-		8006486C1E4EEDC20075C3C2 /* search */ = {
-			isa = PBXGroup;
-			children = (
-				8006486D1E4EEDC20075C3C2 /* search@2x.png */,
-			);
-			path = search;
-			sourceTree = "<group>";
-		};
 		A44A75071E4C48380084EF3D = {
 			isa = PBXGroup;
 			children = (
@@ -110,7 +81,6 @@
 		A44A75121E4C48380084EF3D /* asset */ = {
 			isa = PBXGroup;
 			children = (
-				A4D6B6701E4D808B00CA4883 /* resources */,
 				80DDE29B1E516CBF000FAD5B /* ConfigurationTemplate.h */,
 				A44A75161E4C48380084EF3D /* AppDelegate.h */,
 				A44A75171E4C48380084EF3D /* AppDelegate.m */,
@@ -136,15 +106,6 @@
 				A44A75141E4C48380084EF3D /* main.m */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		A4D6B6701E4D808B00CA4883 /* resources */ = {
-			isa = PBXGroup;
-			children = (
-				8006486C1E4EEDC20075C3C2 /* search */,
-				800648631E4EEA210075C3C2 /* camera.imageset */,
-			);
-			path = resources;
 			sourceTree = "<group>";
 		};
 		C7EB65FAECC433D8D3401984 /* Pods */ = {
@@ -218,13 +179,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8006486E1E4EEDC20075C3C2 /* search@2x.png in Resources */,
 				A44A75231E4C48380084EF3D /* LaunchScreen.storyboard in Resources */,
-				800648691E4EEA210075C3C2 /* camera@3x.png in Resources */,
 				A44A75201E4C48380084EF3D /* Assets.xcassets in Resources */,
-				8006486A1E4EEA210075C3C2 /* camera_512.png in Resources */,
-				800648681E4EEA210075C3C2 /* camera@2x.png in Resources */,
-				8006486B1E4EEA210075C3C2 /* Contents.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

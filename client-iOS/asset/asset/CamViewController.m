@@ -18,7 +18,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    UIImage *cameraIcon = [[UIImage imageNamed:@"camera@3x.png"] imageWithRenderingMode:UIImageRenderingModeAutomatic];
+    UIImage *cameraIcon = [[UIImage imageNamed:@"Camera"] imageWithRenderingMode:UIImageRenderingModeAutomatic];
     UITabBarItem *rightTabItem=[[UITabBarItem alloc] initWithTitle:@"扫一扫" image:cameraIcon tag:2];
     self.tabBarItem=rightTabItem;
     

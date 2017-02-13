@@ -23,10 +23,7 @@
     // Do any additional setup after loading the view, typically from a nib.
 
 #pragma mark tabBar -
-//    UIImage *cameraIcon = [[UIImage imageNamed:@"camera@3x.png"] imageWithRenderingMode:UIImageRenderingModeAutomatic];
-//    UITabBarItem *leftTabItem=[[UITabBarItem alloc] initWithTabBarSystemItem:UITabBarSystemItemSearch tag:404];
-//    self.tabBarItem=leftTabItem;
-    UIImage *searchIcon = [[UIImage imageNamed:@"search@2x.png"] imageWithRenderingMode:UIImageRenderingModeAutomatic];
+    UIImage *searchIcon = [[UIImage imageNamed:@"Search"] imageWithRenderingMode:UIImageRenderingModeAutomatic];
     UITabBarItem *leftTabItem=[[UITabBarItem alloc] initWithTitle:@"搜索" image:searchIcon tag:1];
     self.tabBarItem=leftTabItem;
     

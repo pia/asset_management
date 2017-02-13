@@ -12,5 +12,3 @@
 
 #endif /* ConfigurationTemplate_h */
 
-//表格里要显示的标题
-#define titleArray {@"资产名称",@"资产编号",@"购置日期",@"存放地点",@"总价",@"使用人"}
