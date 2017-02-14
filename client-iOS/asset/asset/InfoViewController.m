@@ -9,7 +9,6 @@
 #import "InfoViewController.h"
 #import <Chameleon.h>
 #import "DataProvider.h"
-#import "ConfigurationTemplate.h"
 
 @interface InfoViewController ()
 
@@ -53,24 +52,24 @@
     //尝试获得可复用的单元格,如果没得到，则返回nil
     UITableViewCell *cell=[_infoTable dequeueReusableCellWithIdentifier:strTitle];
     if (cell==nil) {
-        cell=[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:strTitle];
+        cell=[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue2 reuseIdentifier:strTitle];
     }
-    //如果想让textlabel和detailtextlabel都左对齐，初始化时选择样式UITableViewCellStyleValue2，然后设置cell.textlabel.textAlignment = NSTextAlignmentLeft;
+    //如果想让textlabel和detailtextlabel都左对齐，初始化时选择样式UITableViewCellStyleValue2，然后设置cell.textLabel.textAlignment = NSTextAlignmentLeft;
     //因为设置textlabel的textAlignment起作用，而设置detailtextlabel的textAlignment不起作用。
     //也可选择样式UITableViewCellStyleDefault，然后自定义一个label加到cell上再设置textAlignment
     cell.textLabel.textAlignment = NSTextAlignmentLeft;
     cell.textLabel.text=[_titleArray objectAtIndex:indexPath.row];
     cell.detailTextLabel.text=[_detail objectAtIndex:indexPath.row];
-    UIImage *cellImage=nil;
-    switch (indexPath.row) {
-        case 0: cellImage=[UIImage imageNamed:@"name"]; break;
-        case 1: cellImage=[UIImage imageNamed:@"id"]; break;
-        case 2: cellImage=[UIImage imageNamed:@"time"]; break;
-        case 3: cellImage=[UIImage imageNamed:@"place"]; break;
-        case 4: cellImage=[UIImage imageNamed:@"price"]; break;
-        default: cellImage=[UIImage imageNamed:@"user"]; break;
-    }
-    cell.imageView.image = cellImage;//[UIImage imageNamed:@"name"];
+//    UIImage *cellImage=nil;
+//    switch (indexPath.row) {
+//        case 0: cellImage=[UIImage imageNamed:@"name"]; break;
+//        case 1: cellImage=[UIImage imageNamed:@"id"]; break;
+//        case 2: cellImage=[UIImage imageNamed:@"time"]; break;
+//        case 3: cellImage=[UIImage imageNamed:@"place"]; break;
+//        case 4: cellImage=[UIImage imageNamed:@"price"]; break;
+//        default: cellImage=[UIImage imageNamed:@"user"]; break;
+//    }
+//    cell.imageView.image = cellImage;
     return cell;
 }
 

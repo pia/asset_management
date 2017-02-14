@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import <Chameleon.h>
 #import "InfoViewController.h"
+#import <SYScanCodeViewController.h>
 
 @interface ViewController ()
 
@@ -37,9 +38,7 @@
     [self.view addSubview:self.searchTextbox];
     self.searchTextbox.delegate=self;
     
-    
 }
-
 
 
 - (BOOL)textFieldShouldEndEditing:(UITextField *)textField{

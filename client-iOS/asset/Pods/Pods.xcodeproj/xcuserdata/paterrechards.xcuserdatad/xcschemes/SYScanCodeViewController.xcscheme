@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '0078F7B741239695C869B52CC8D23F04'
-               BlueprintName = 'Pods-asset'
+               BlueprintIdentifier = '8E4357C1D15F590D4E19756689CF7F2B'
+               BlueprintName = 'SYScanCodeViewController'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'libPods-asset.a'>
+               BuildableName = 'libSYScanCodeViewController.a'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

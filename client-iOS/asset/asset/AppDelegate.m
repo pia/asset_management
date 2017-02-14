@@ -8,6 +8,8 @@
 
 #import "AppDelegate.h"
 #import <Chameleon.h>
+#import "ViewController.h"
+#import <SYScanCodeViewController.h>
 
 @interface AppDelegate ()
 
@@ -23,12 +25,20 @@
     
     self.tabController = [[UITabBarController alloc] init];
     
+    //初始化左边视图
     ViewController *viewLeft=[[ViewController alloc] init];
-    CamViewController *viewRight=[[CamViewController alloc] init];
     viewLeft.view.backgroundColor=[UIColor flatWhiteColor];
-    viewRight.view.backgroundColor=[UIColor flatYellowColor];
     viewLeft.title=@"搜索";
+    
+    //初始化右边视图
+    SYScanCodeViewController *viewRight = [[SYScanCodeViewController alloc] initWithSuccessBlock:^(NSString *codeInfo) {
+        NSLog(@"%@", codeInfo);
+    }];
     viewRight.title=@"扫一扫";
+    UIImage *cameraIcon = [[UIImage imageNamed:@"Camera"] imageWithRenderingMode:UIImageRenderingModeAutomatic];
+    UITabBarItem *rightTabItem=[[UITabBarItem alloc] initWithTitle:@"扫一扫" image:cameraIcon tag:2];
+    viewRight.tabBarItem=rightTabItem;
+
     //分别管理两个不同的栈
     UINavigationController *naviFirst = [[UINavigationController alloc] initWithRootViewController:viewLeft];
     UINavigationController *naviSecond = [[UINavigationController alloc] initWithRootViewController:viewRight];

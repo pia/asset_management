@@ -21,9 +21,9 @@
 //-------------------------------------------------------
 
 @interface InfoViewController : UIViewController <UITabBarDelegate,UITableViewDataSource> {
-    UITableView *_infoTable;//结果表格
-    NSArray *_titleArray;//左侧标题数组
-    NSArray *_detail;//右侧信息数组
+    UITableView *_infoTable;  //结果表格
+    NSArray *_titleArray;     //左侧标题数组
+    NSArray *_detail;         //右侧信息数组
 }
 
 @property (retain,nonatomic) NSString *_text;//输入的编号
