@@ -7,9 +7,7 @@
 //
 
 #import "ViewController.h"
-#import <Chameleon.h>
 #import "InfoViewController.h"
-#import <SYScanCodeViewController.h>
 
 @interface ViewController ()
 
@@ -29,7 +27,7 @@
     self.tabBarItem=leftTabItem;
     
 #pragma mark searchField -
-    self.searchTextbox=[[UITextField alloc]initWithFrame:CGRectMake(33, (self.view.bounds.size.height-75)/2, self.view.bounds.size.width-66, 50)];
+    self.searchTextbox=[[UITextField alloc]initWithFrame:CGRectMake(searchTextbox_x, searchTextbox_y, searchTextbox_width, searchTextbox_height)];
     self.searchTextbox.borderStyle=UITextBorderStyleRoundedRect;
     self.searchTextbox.clearButtonMode =UITextFieldViewModeWhileEditing;
     self.searchTextbox.placeholder = @"请输入编号....";

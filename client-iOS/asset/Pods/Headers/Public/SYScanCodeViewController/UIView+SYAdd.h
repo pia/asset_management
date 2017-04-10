@@ -1,1 +1,0 @@
-../../../SYScanCodeViewController/SYScanCodeViewController/UIView+SYAdd.h

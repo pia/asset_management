@@ -1,22 +1,3 @@
-PODS:
-  - ChameleonFramework (2.1.0):
-    - ChameleonFramework/Default (= 2.1.0)
-  - ChameleonFramework/Default (2.1.0)
-  - FMDB (2.6.2):
-    - FMDB/standard (= 2.6.2)
-  - FMDB/standard (2.6.2)
-  - SYScanCodeViewController (0.0.2)
-
-DEPENDENCIES:
-  - ChameleonFramework (~> 2.1.0)
-  - FMDB (~> 2.6.2)
-  - SYScanCodeViewController (~> 0.0.2)
-
-SPEC CHECKSUMS:
-  ChameleonFramework: d21a3cc247abfe5e37609a283a8238b03575cf64
-  FMDB: 854a0341b4726e53276f2a8996f06f1b80f9259a
-  SYScanCodeViewController: e395a7f504c7dead1bf0a6d0829543f15e006113
-
-PODFILE CHECKSUM: e68bce76e66b1a62ad42e1eaf91786865718cafb
+PODFILE CHECKSUM: e4239b92fc855858bad5aa2c21befdbb53a20fe5
 
 COCOAPODS: 1.2.0

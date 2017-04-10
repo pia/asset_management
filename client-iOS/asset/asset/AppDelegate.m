@@ -3,13 +3,12 @@
 //  asset
 //
 //  Created by sun on 09/02/2017.
-//  Copyright © 2017 sun. All rights reserved.
+//  Copyright © 2017 pia. All rights reserved.
 //
 
 #import "AppDelegate.h"
-#import <Chameleon.h>
 #import "ViewController.h"
-#import <SYScanCodeViewController.h>
+#import "ScanViewController.h"
 
 @interface AppDelegate ()
 
@@ -27,13 +26,11 @@
     
     //初始化左边视图
     ViewController *viewLeft=[[ViewController alloc] init];
-    viewLeft.view.backgroundColor=[UIColor flatWhiteColor];
+    viewLeft.view.backgroundColor=[UIColor whiteColor];
     viewLeft.title=@"搜索";
     
     //初始化右边视图
-    SYScanCodeViewController *viewRight = [[SYScanCodeViewController alloc] initWithSuccessBlock:^(NSString *codeInfo) {
-        NSLog(@"%@", codeInfo);
-    }];
+    ScanViewController *viewRight = [[ScanViewController alloc] init];
     viewRight.title=@"扫一扫";
     UIImage *cameraIcon = [[UIImage imageNamed:@"Camera"] imageWithRenderingMode:UIImageRenderingModeAutomatic];
     UITabBarItem *rightTabItem=[[UITabBarItem alloc] initWithTitle:@"扫一扫" image:cameraIcon tag:2];

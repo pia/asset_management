@@ -6,6 +6,11 @@
 //  Copyright © 2017 sun. All rights reserved.
 //
 
+#define searchTextbox_x 33
+#define searchTextbox_y (self.view.bounds.size.height-75)/2
+#define searchTextbox_width self.view.bounds.size.width-66
+#define searchTextbox_height 50
+
 #import <UIKit/UIKit.h>
 
 @interface ViewController : UIViewController<UITextFieldDelegate>{

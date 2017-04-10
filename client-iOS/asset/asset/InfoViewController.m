@@ -7,7 +7,6 @@
 //
 
 #import "InfoViewController.h"
-#import <Chameleon.h>
 #import "DataProvider.h"
 
 @interface InfoViewController ()
@@ -19,7 +18,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.view.backgroundColor=[UIColor flatWhiteColor];
+    self.view.backgroundColor=[UIColor whiteColor];
     self.title=@"结果";
     NSLog(@"assetID is %@ //传值成功",self._text);
     
@@ -60,22 +59,9 @@
     cell.textLabel.textAlignment = NSTextAlignmentLeft;
     cell.textLabel.text=[_titleArray objectAtIndex:indexPath.row];
     cell.detailTextLabel.text=[_detail objectAtIndex:indexPath.row];
-//    UIImage *cellImage=nil;
-//    switch (indexPath.row) {
-//        case 0: cellImage=[UIImage imageNamed:@"name"]; break;
-//        case 1: cellImage=[UIImage imageNamed:@"id"]; break;
-//        case 2: cellImage=[UIImage imageNamed:@"time"]; break;
-//        case 3: cellImage=[UIImage imageNamed:@"place"]; break;
-//        case 4: cellImage=[UIImage imageNamed:@"price"]; break;
-//        default: cellImage=[UIImage imageNamed:@"user"]; break;
-//    }
-//    cell.imageView.image = cellImage;
+
     return cell;
 }
-
-//- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-//    return 60;
-//}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

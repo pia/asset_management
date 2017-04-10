@@ -8,30 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		79B8CF1A471C6995ED94B90E /* libPods-asset.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6ABAF4434C027095CDD24E8A /* libPods-asset.a */; };
-		8025562B1E54291800567F0F /* Contents.json in Resources */ = {isa = PBXBuildFile; fileRef = 802556131E54291800567F0F /* Contents.json */; };
-		8025562C1E54291800567F0F /* icon-20-ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 802556141E54291800567F0F /* icon-20-ipad.png */; };
-		8025562D1E54291800567F0F /* icon-20@2x-ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 802556151E54291800567F0F /* icon-20@2x-ipad.png */; };
-		8025562E1E54291800567F0F /* icon-20@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 802556161E54291800567F0F /* icon-20@2x.png */; };
-		8025562F1E54291800567F0F /* icon-20@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 802556171E54291800567F0F /* icon-20@3x.png */; };
-		802556301E54291800567F0F /* icon-29-ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 802556181E54291800567F0F /* icon-29-ipad.png */; };
-		802556311E54291800567F0F /* icon-29.png in Resources */ = {isa = PBXBuildFile; fileRef = 802556191E54291800567F0F /* icon-29.png */; };
-		802556321E54291800567F0F /* icon-29@2x-ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 8025561A1E54291800567F0F /* icon-29@2x-ipad.png */; };
-		802556331E54291800567F0F /* icon-29@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8025561B1E54291800567F0F /* icon-29@2x.png */; };
-		802556341E54291800567F0F /* icon-29@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8025561C1E54291800567F0F /* icon-29@3x.png */; };
-		802556351E54291800567F0F /* icon-40.png in Resources */ = {isa = PBXBuildFile; fileRef = 8025561D1E54291800567F0F /* icon-40.png */; };
-		802556361E54291800567F0F /* icon-40@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8025561E1E54291800567F0F /* icon-40@2x.png */; };
-		802556371E54291800567F0F /* icon-40@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8025561F1E54291800567F0F /* icon-40@3x.png */; };
-		802556381E54291800567F0F /* icon-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 802556201E54291800567F0F /* icon-50.png */; };
-		802556391E54291800567F0F /* icon-50@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 802556211E54291800567F0F /* icon-50@2x.png */; };
-		8025563A1E54291800567F0F /* icon-57.png in Resources */ = {isa = PBXBuildFile; fileRef = 802556221E54291800567F0F /* icon-57.png */; };
-		8025563B1E54291800567F0F /* icon-57@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 802556231E54291800567F0F /* icon-57@2x.png */; };
-		8025563C1E54291800567F0F /* icon-60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 802556241E54291800567F0F /* icon-60@2x.png */; };
-		8025563D1E54291800567F0F /* icon-60@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 802556251E54291800567F0F /* icon-60@3x.png */; };
-		8025563E1E54291800567F0F /* icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = 802556261E54291800567F0F /* icon-72.png */; };
-		8025563F1E54291800567F0F /* icon-72@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 802556271E54291800567F0F /* icon-72@2x.png */; };
-		802556401E54291800567F0F /* icon-76.png in Resources */ = {isa = PBXBuildFile; fileRef = 802556281E54291800567F0F /* icon-76.png */; };
-		802556411E54291800567F0F /* icon-76@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 802556291E54291800567F0F /* icon-76@2x.png */; };
-		802556421E54291800567F0F /* icon-83.5@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8025562A1E54291800567F0F /* icon-83.5@2x.png */; };
 		80DDE2741E50267C000FAD5B /* InfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 80DDE2731E50267C000FAD5B /* InfoViewController.m */; };
 		80DDE2771E508808000FAD5B /* DataProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 80DDE2761E508808000FAD5B /* DataProvider.m */; };
 		A44A75151E4C48380084EF3D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A44A75141E4C48380084EF3D /* main.m */; };
@@ -39,34 +15,11 @@
 		A44A751B1E4C48380084EF3D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A44A751A1E4C48380084EF3D /* ViewController.m */; };
 		A44A75201E4C48380084EF3D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A44A751F1E4C48380084EF3D /* Assets.xcassets */; };
 		A44A75231E4C48380084EF3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A44A75211E4C48380084EF3D /* LaunchScreen.storyboard */; };
+		D6CABA261E9BA2C1002D9D5A /* ScanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6CABA251E9BA2C1002D9D5A /* ScanViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		6ABAF4434C027095CDD24E8A /* libPods-asset.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-asset.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		802556131E54291800567F0F /* Contents.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Contents.json; sourceTree = "<group>"; };
-		802556141E54291800567F0F /* icon-20-ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-20-ipad.png"; sourceTree = "<group>"; };
-		802556151E54291800567F0F /* icon-20@2x-ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-20@2x-ipad.png"; sourceTree = "<group>"; };
-		802556161E54291800567F0F /* icon-20@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-20@2x.png"; sourceTree = "<group>"; };
-		802556171E54291800567F0F /* icon-20@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-20@3x.png"; sourceTree = "<group>"; };
-		802556181E54291800567F0F /* icon-29-ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-29-ipad.png"; sourceTree = "<group>"; };
-		802556191E54291800567F0F /* icon-29.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-29.png"; sourceTree = "<group>"; };
-		8025561A1E54291800567F0F /* icon-29@2x-ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-29@2x-ipad.png"; sourceTree = "<group>"; };
-		8025561B1E54291800567F0F /* icon-29@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-29@2x.png"; sourceTree = "<group>"; };
-		8025561C1E54291800567F0F /* icon-29@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-29@3x.png"; sourceTree = "<group>"; };
-		8025561D1E54291800567F0F /* icon-40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-40.png"; sourceTree = "<group>"; };
-		8025561E1E54291800567F0F /* icon-40@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-40@2x.png"; sourceTree = "<group>"; };
-		8025561F1E54291800567F0F /* icon-40@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-40@3x.png"; sourceTree = "<group>"; };
-		802556201E54291800567F0F /* icon-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-50.png"; sourceTree = "<group>"; };
-		802556211E54291800567F0F /* icon-50@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-50@2x.png"; sourceTree = "<group>"; };
-		802556221E54291800567F0F /* icon-57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-57.png"; sourceTree = "<group>"; };
-		802556231E54291800567F0F /* icon-57@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-57@2x.png"; sourceTree = "<group>"; };
-		802556241E54291800567F0F /* icon-60@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-60@2x.png"; sourceTree = "<group>"; };
-		802556251E54291800567F0F /* icon-60@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-60@3x.png"; sourceTree = "<group>"; };
-		802556261E54291800567F0F /* icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-72.png"; sourceTree = "<group>"; };
-		802556271E54291800567F0F /* icon-72@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-72@2x.png"; sourceTree = "<group>"; };
-		802556281E54291800567F0F /* icon-76.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-76.png"; sourceTree = "<group>"; };
-		802556291E54291800567F0F /* icon-76@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-76@2x.png"; sourceTree = "<group>"; };
-		8025562A1E54291800567F0F /* icon-83.5@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-83.5@2x.png"; sourceTree = "<group>"; };
 		80DDE2721E50267C000FAD5B /* InfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfoViewController.h; sourceTree = "<group>"; };
 		80DDE2731E50267C000FAD5B /* InfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfoViewController.m; sourceTree = "<group>"; };
 		80DDE2751E508808000FAD5B /* DataProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataProvider.h; sourceTree = "<group>"; };
@@ -81,6 +34,8 @@
 		A44A751F1E4C48380084EF3D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A44A75221E4C48380084EF3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A44A75241E4C48380084EF3D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D6CABA241E9BA2C1002D9D5A /* ScanViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScanViewController.h; sourceTree = "<group>"; };
+		D6CABA251E9BA2C1002D9D5A /* ScanViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScanViewController.m; sourceTree = "<group>"; };
 		E446E1C173D876EB33618386 /* Pods-asset.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-asset.debug.xcconfig"; path = "Pods/Target Support Files/Pods-asset/Pods-asset.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -104,37 +59,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		802556121E54291800567F0F /* AppIcon.appiconset */ = {
-			isa = PBXGroup;
-			children = (
-				802556131E54291800567F0F /* Contents.json */,
-				802556141E54291800567F0F /* icon-20-ipad.png */,
-				802556151E54291800567F0F /* icon-20@2x-ipad.png */,
-				802556161E54291800567F0F /* icon-20@2x.png */,
-				802556171E54291800567F0F /* icon-20@3x.png */,
-				802556181E54291800567F0F /* icon-29-ipad.png */,
-				802556191E54291800567F0F /* icon-29.png */,
-				8025561A1E54291800567F0F /* icon-29@2x-ipad.png */,
-				8025561B1E54291800567F0F /* icon-29@2x.png */,
-				8025561C1E54291800567F0F /* icon-29@3x.png */,
-				8025561D1E54291800567F0F /* icon-40.png */,
-				8025561E1E54291800567F0F /* icon-40@2x.png */,
-				8025561F1E54291800567F0F /* icon-40@3x.png */,
-				802556201E54291800567F0F /* icon-50.png */,
-				802556211E54291800567F0F /* icon-50@2x.png */,
-				802556221E54291800567F0F /* icon-57.png */,
-				802556231E54291800567F0F /* icon-57@2x.png */,
-				802556241E54291800567F0F /* icon-60@2x.png */,
-				802556251E54291800567F0F /* icon-60@3x.png */,
-				802556261E54291800567F0F /* icon-72.png */,
-				802556271E54291800567F0F /* icon-72@2x.png */,
-				802556281E54291800567F0F /* icon-76.png */,
-				802556291E54291800567F0F /* icon-76@2x.png */,
-				8025562A1E54291800567F0F /* icon-83.5@2x.png */,
-			);
-			path = AppIcon.appiconset;
-			sourceTree = "<group>";
-		};
 		A44A75071E4C48380084EF3D = {
 			isa = PBXGroup;
 			children = (
@@ -156,11 +80,12 @@
 		A44A75121E4C48380084EF3D /* asset */ = {
 			isa = PBXGroup;
 			children = (
-				802556121E54291800567F0F /* AppIcon.appiconset */,
 				A44A75161E4C48380084EF3D /* AppDelegate.h */,
 				A44A75171E4C48380084EF3D /* AppDelegate.m */,
 				A44A75191E4C48380084EF3D /* ViewController.h */,
 				A44A751A1E4C48380084EF3D /* ViewController.m */,
+				D6CABA241E9BA2C1002D9D5A /* ScanViewController.h */,
+				D6CABA251E9BA2C1002D9D5A /* ScanViewController.m */,
 				80DDE2721E50267C000FAD5B /* InfoViewController.h */,
 				80DDE2731E50267C000FAD5B /* InfoViewController.m */,
 				80DDE2751E508808000FAD5B /* DataProvider.h */,
@@ -252,32 +177,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8025562F1E54291800567F0F /* icon-20@3x.png in Resources */,
-				802556341E54291800567F0F /* icon-29@3x.png in Resources */,
-				8025563B1E54291800567F0F /* icon-57@2x.png in Resources */,
-				8025563E1E54291800567F0F /* icon-72.png in Resources */,
 				A44A75231E4C48380084EF3D /* LaunchScreen.storyboard in Resources */,
-				802556311E54291800567F0F /* icon-29.png in Resources */,
-				802556331E54291800567F0F /* icon-29@2x.png in Resources */,
-				802556361E54291800567F0F /* icon-40@2x.png in Resources */,
-				8025562D1E54291800567F0F /* icon-20@2x-ipad.png in Resources */,
-				802556351E54291800567F0F /* icon-40.png in Resources */,
-				8025563A1E54291800567F0F /* icon-57.png in Resources */,
-				8025563D1E54291800567F0F /* icon-60@3x.png in Resources */,
 				A44A75201E4C48380084EF3D /* Assets.xcassets in Resources */,
-				802556421E54291800567F0F /* icon-83.5@2x.png in Resources */,
-				802556381E54291800567F0F /* icon-50.png in Resources */,
-				802556371E54291800567F0F /* icon-40@3x.png in Resources */,
-				8025562E1E54291800567F0F /* icon-20@2x.png in Resources */,
-				8025562C1E54291800567F0F /* icon-20-ipad.png in Resources */,
-				802556401E54291800567F0F /* icon-76.png in Resources */,
-				802556411E54291800567F0F /* icon-76@2x.png in Resources */,
-				8025563C1E54291800567F0F /* icon-60@2x.png in Resources */,
-				8025563F1E54291800567F0F /* icon-72@2x.png in Resources */,
-				8025562B1E54291800567F0F /* Contents.json in Resources */,
-				802556321E54291800567F0F /* icon-29@2x-ipad.png in Resources */,
-				802556391E54291800567F0F /* icon-50@2x.png in Resources */,
-				802556301E54291800567F0F /* icon-29-ipad.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -337,6 +238,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A44A751B1E4C48380084EF3D /* ViewController.m in Sources */,
+				D6CABA261E9BA2C1002D9D5A /* ScanViewController.m in Sources */,
 				A44A75181E4C48380084EF3D /* AppDelegate.m in Sources */,
 				80DDE2771E508808000FAD5B /* DataProvider.m in Sources */,
 				80DDE2741E50267C000FAD5B /* InfoViewController.m in Sources */,
@@ -452,11 +354,13 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E446E1C173D876EB33618386 /* Pods-asset.debug.xcconfig */;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = HYC6V2835U;
 				INFOPLIST_FILE = asset/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = cx.evil.asset;
+				PRODUCT_BUNDLE_IDENTIFIER = "cx.evil.-----";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -465,11 +369,13 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 846AF28740AE5514A79A53AD /* Pods-asset.release.xcconfig */;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = HYC6V2835U;
 				INFOPLIST_FILE = asset/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = cx.evil.asset;
+				PRODUCT_BUNDLE_IDENTIFIER = "cx.evil.-----";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

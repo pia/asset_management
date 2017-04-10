@@ -11,5 +11,6 @@
 
 @interface DataProvider : NSObject <InfodataSource>
 
+- (void)downloadDB;//数据库缓存到本地
 
 @end
