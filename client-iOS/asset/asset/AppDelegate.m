@@ -2,7 +2,7 @@
 //  AppDelegate.m
 //  asset
 //
-//  Created by sun on 09/02/2017.
+//  Created by pia on 09/02/2017.
 //  Copyright © 2017 pia. All rights reserved.
 //
 
@@ -39,7 +39,7 @@
     //分别管理两个不同的栈
     UINavigationController *naviFirst = [[UINavigationController alloc] initWithRootViewController:viewLeft];
     UINavigationController *naviSecond = [[UINavigationController alloc] initWithRootViewController:viewRight];
-    self.tabController.viewControllers = @[naviFirst,naviSecond];
+    self.tabController.viewControllers = @[naviSecond, naviFirst];
     self.window.rootViewController = self.tabController;
 
     return YES;

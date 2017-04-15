@@ -2,12 +2,12 @@
 //  InfoViewController.m
 //  asset
 //
-//  Created by Pater Rechards on 2/12/17.
-//  Copyright © 2017 sun. All rights reserved.
+//  Created by pia on 2/12/17.
+//  Copyright © 2017 pia. All rights reserved.
 //
 
 #import "InfoViewController.h"
-#import "DataProvider.h"
+#import "AFHTTPSessionManager.h"
 
 @interface InfoViewController ()
 
@@ -20,11 +20,10 @@
     // Do any additional setup after loading the view.
     self.view.backgroundColor=[UIColor whiteColor];
     self.title=@"结果";
-    NSLog(@"assetID is %@ //传值成功",self._text);
     
-    DataProvider *mProvider=[[DataProvider alloc] init];
-    [mProvider parseData];
-    
+    NSString *URLString = @"http://52.199.159.200:8000/";
+    URLString = [[URLString stringByAppendingString:self._text] stringByAppendingString:@".json"];
+    NSLog(@"URLString : %@",URLString);
     
     //表格--->
     _infoTable=[[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStyleGrouped];
@@ -37,8 +36,28 @@
     [self.view addSubview:_infoTable];
     
     _titleArray=[NSArray arrayWithObjects:@"资产名称",@"资产编号",@"购置日期",@"存放地点",@"总价",@"使用人", nil];
-    _detail=[[NSArray alloc] init];
-    _detail=mProvider.Info;
+    _detail=[[NSMutableArray alloc] init];
+    
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    [manager GET:URLString parameters:nil progress:nil success:^(NSURLSessionTask *task, id responseObject) {
+//        NSLog(@"JSON: %@", responseObject);
+        id obj = responseObject;
+        NSDictionary *dic = (NSDictionary *)obj;
+        _assetName  = [dic objectForKey:@"assetName"];
+        _assetDate  = [dic objectForKey:@"assetDate"];
+        _assetPlace = [dic objectForKey:@"assetPlace"];
+        _assetPrice = [dic objectForKey:@"assetPrice"];
+        _assetUser  = [dic objectForKey:@"assetUser"];
+        _assetID = @"123";
+        _detail=[NSMutableArray arrayWithObjects:_assetName, _assetID, _assetDate, _assetPlace, _assetPrice, _assetUser, nil];
+        NSLog(@"DETAIL : %@",_detail);
+        [_infoTable reloadData];
+
+    } failure:^(NSURLSessionTask *operation, NSError *error) {
+        NSLog(@"Error: %@", error);
+    }];
+
+    _detail=[NSMutableArray arrayWithObjects:@"没找到",@"没找到",@"没找到",@"没找到",@"没找到",@"没找到", nil];
     [_infoTable reloadData];
 }
 
@@ -53,9 +72,7 @@
     if (cell==nil) {
         cell=[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue2 reuseIdentifier:strTitle];
     }
-    //如果想让textlabel和detailtextlabel都左对齐，初始化时选择样式UITableViewCellStyleValue2，然后设置cell.textLabel.textAlignment = NSTextAlignmentLeft;
-    //因为设置textlabel的textAlignment起作用，而设置detailtextlabel的textAlignment不起作用。
-    //也可选择样式UITableViewCellStyleDefault，然后自定义一个label加到cell上再设置textAlignment
+
     cell.textLabel.textAlignment = NSTextAlignmentLeft;
     cell.textLabel.text=[_titleArray objectAtIndex:indexPath.row];
     cell.detailTextLabel.text=[_detail objectAtIndex:indexPath.row];
@@ -67,15 +84,5 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

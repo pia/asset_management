@@ -2,7 +2,7 @@
 //  ScanViewController.h
 //  asset
 //
-//  Created by sure on 10/04/2017.
+//  Created by pia on 10/04/2017.
 //  Copyright © 2017 pia. All rights reserved.
 //
 

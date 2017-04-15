@@ -2,7 +2,7 @@
 //  ScanViewController.m
 //  asset
 //
-//  Created by sure on 10/04/2017.
+//  Created by pia on 10/04/2017.
 //  Copyright © 2017 pia. All rights reserved.
 //
 
@@ -129,3 +129,4 @@
 */
 
 @end
+//http://vlin2014.blog.163.com/blog/static/23338000120156564033555/
