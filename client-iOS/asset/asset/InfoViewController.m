@@ -21,7 +21,7 @@
     self.view.backgroundColor=[UIColor whiteColor];
     self.title=@"结果";
     
-    NSString *URLString = @"http://52.199.159.200:8000/";
+    NSString *URLString = @"http://52.199.159.200:5000/asset/";
     URLString = [[URLString stringByAppendingString:self._text] stringByAppendingString:@".json"];
     NSLog(@"URLString : %@",URLString);
     
