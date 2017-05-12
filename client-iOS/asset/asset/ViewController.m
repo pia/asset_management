@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import <SDAutoLayout.h>
 #import "InfoViewController.h"
 
 @interface ViewController ()
@@ -27,13 +28,14 @@
     self.tabBarItem=leftTabItem;
     
 #pragma mark searchField -
-    self.searchTextbox=[[UITextField alloc]initWithFrame:CGRectMake(searchTextbox_x, searchTextbox_y, searchTextbox_width, searchTextbox_height)];
+    self.searchTextbox=[[UITextField alloc] initWithFrame:CGRectMake(0, 0, 0, 0)];
     self.searchTextbox.borderStyle=UITextBorderStyleRoundedRect;
     self.searchTextbox.clearButtonMode =UITextFieldViewModeWhileEditing;
     self.searchTextbox.placeholder = @"请输入编号....";
     self.searchTextbox.keyboardType = UIKeyboardTypeNumberPad;//UIKeyboardTypeNumberPad;
     self.searchTextbox.returnKeyType =UIReturnKeySearch;
     [self.view addSubview:self.searchTextbox];
+    self.searchTextbox.sd_layout.leftSpaceToView(self.view, 33).rightSpaceToView(self.view, 33).centerYEqualToView(self.view).heightIs(50);
     self.searchTextbox.delegate=self;
     
 }
@@ -42,25 +44,25 @@
 - (BOOL)textFieldShouldEndEditing:(UITextField *)textField{
     NSLog(@"%@",self.searchTextbox.text);
     self.assetID=self.searchTextbox.text;
-    //TODO 判断是否为其他无关字符
-    switch (self.assetID.length) {
-        case 10:{
+//    //TODO 判断是否为其他无关字符
+//    switch (self.assetID.length) {
+//        case 10:{
             InfoViewController *infoView=[[InfoViewController alloc] init];
             infoView._text=self.assetID;
             [self.navigationController pushViewController:infoView animated:YES];
-        }break;
-        case 0:{
-            NSLog(@"没有输入");
-        }break;
-        default:{
-            //提示框
-            UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"提示" message:@"输入十位数字!" preferredStyle:UIAlertControllerStyleAlert];
-            [alert addAction:[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-                //点击按钮的响应事件；
-            }]];
-            [self presentViewController:alert animated:true completion:nil];
-        }break;
-    }
+//        }break;
+//        case 0:{
+//            NSLog(@"没有输入");
+//        }break;
+//        default:{
+//            //提示框
+//            UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"提示" message:@"输入十位数字!" preferredStyle:UIAlertControllerStyleAlert];
+//            [alert addAction:[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+//                //点击按钮的响应事件；
+//            }]];
+//            [self presentViewController:alert animated:true completion:nil];
+//        }break;
+//    }
     
     return YES;
 }

@@ -14,15 +14,25 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>SDAutoLayout.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>74DEC0EBE406F694BC77C019C8A2356C</key>
+		<key>091C2720120F29675CE8D3A67C811612</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>9E033EDB5EC0819481B0546434FA577B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C7BFFD910B3762C8832B63181E72C3C0</key>
 		<dict>
 			<key>primary</key>
 			<true/>
