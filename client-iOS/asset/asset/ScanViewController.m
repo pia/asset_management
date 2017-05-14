@@ -12,11 +12,8 @@
 #define viewHeight self.view.frame.size.height
 #define viewWidth self.view.frame.size.width
 
-@interface ScanViewController ()<AVCaptureMetadataOutputObjectsDelegate>
-{
-    UIImageView *scanLine;
-    NSTimer *timer;
-}
+@interface ScanViewController ()
+
 @end
 
 @implementation ScanViewController
@@ -27,22 +24,6 @@
     self.view.backgroundColor=[UIColor whiteColor];
     //执行开始扫描方法
     [self startReading];
-    
-    //添加扫描框
-    UIImageView *scanView = [[UIImageView alloc] init];
-    scanView.bounds = CGRectMake(0, 0, viewWidth, viewWidth);
-    scanView.center = CGPointMake(viewWidth/2, viewHeight/2);
-    scanView.contentMode = UIViewContentModeScaleAspectFit;
-    UIImage *scanImage = [UIImage imageNamed:@"scanView.png"];
-    scanView.image = scanImage;
-    [self.view addSubview:scanView];
-    
-    //添加移动扫描条
-    scanLine = [[UIImageView alloc] initWithFrame:CGRectMake(0, (viewHeight-viewWidth)/2, 2, viewWidth)];
-    scanLine.image = [UIImage imageNamed:@"scanLine"];
-    [self.view addSubview:scanLine];
-    timer = [NSTimer scheduledTimerWithTimeInterval:1.0/50 target:self selector:@selector(scanLineMoving) userInfo:nil                         repeats:YES];
-    
 
 }
 
@@ -83,13 +64,6 @@
     [_session startRunning];
 }
 
-//移动扫描条
-- (void)scanLineMoving{
-    if (scanLine.frame.origin.x >= self.view.frame.size.width) scanLine.frame = CGRectMake(0, scanLine.frame.origin.y, scanLine.frame.size.width, scanLine.frame.size.height);
-    CGFloat x = scanLine.frame.origin.x;
-    scanLine.frame = CGRectMake(x + 5, scanLine.frame.origin.y, scanLine.frame.size.width, scanLine.frame.size.height);
-}
-
 
 //当扫描到条码或二维码，即执行此方法
 #pragma mark - AVCaptureMetadataOutputObjectsDelegate method
@@ -101,9 +75,7 @@
         AVMetadataMachineReadableCodeObject *metadataObject = [metadataObjects objectAtIndex:0];
         NSLog(@"%@",metadataObject.stringValue);
         
-        [self.preview removeFromSuperlayer];
-        //重新扫描
-        [self startReading];
+        //[self.preview removeFromSuperlayer];
         
         //切换视图
         InfoViewController *infoView=[[InfoViewController alloc] init];
@@ -111,6 +83,10 @@
         [self.navigationController pushViewController:infoView animated:YES];
 
     }
+}
+
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    [_session startRunning];
 }
 
 - (void)didReceiveMemoryWarning {

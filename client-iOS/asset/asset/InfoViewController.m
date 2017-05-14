@@ -23,7 +23,7 @@
     
     NSString *URLString = @"http://52.199.159.200:5000/asset/";
     URLString = [[URLString stringByAppendingString:self._text] stringByAppendingString:@".json"];
-    NSLog(@"URLString : %@",URLString);
+    //NSLog(@"URLString : %@",URLString);
     
     //表格--->
     _infoTable=[[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStyleGrouped];
@@ -48,7 +48,7 @@
         _assetPlace = [dic objectForKey:@"assetPlace"];
         _assetPrice = [dic objectForKey:@"assetPrice"];
         _assetUser  = [dic objectForKey:@"assetUser"];
-        _assetID = @"123";
+        _assetID = self._text;
         _detail=[NSMutableArray arrayWithObjects:_assetName, _assetID, _assetDate, _assetPlace, _assetPrice, _assetUser, nil];
         NSLog(@"DETAIL : %@",_detail);
         [_infoTable reloadData];
