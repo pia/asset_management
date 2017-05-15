@@ -45,24 +45,18 @@
     NSLog(@"%@",self.searchTextbox.text);
     self.assetID=self.searchTextbox.text;
 //    //TODO 判断是否为其他无关字符
-//    switch (self.assetID.length) {
-//        case 10:{
+    switch (self.assetID.length) {
+        case 0: {
+            NSLog(@"用户没有输入");
+            break;
+        }
+        default:{
             InfoViewController *infoView=[[InfoViewController alloc] init];
             infoView._text=self.assetID;
             [self.navigationController pushViewController:infoView animated:YES];
-//        }break;
-//        case 0:{
-//            NSLog(@"没有输入");
-//        }break;
-//        default:{
-//            //提示框
-//            UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"提示" message:@"输入十位数字!" preferredStyle:UIAlertControllerStyleAlert];
-//            [alert addAction:[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-//                //点击按钮的响应事件；
-//            }]];
-//            [self presentViewController:alert animated:true completion:nil];
-//        }break;
-//    }
+        }
+    }
+
     
     return YES;
 }

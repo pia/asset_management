@@ -85,6 +85,7 @@
     }
 }
 
+//如果视图返回，点击屏幕以继续扫描
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     [_session startRunning];
 }
