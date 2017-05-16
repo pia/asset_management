@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "ViewController.h"
 #import "ScanViewController.h"
+#import "WelcomeViewController.h"
 
 @interface AppDelegate ()
 
@@ -22,25 +23,28 @@
     self.window=[[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     [self.window makeKeyAndVisible];
     
-    self.tabController = [[UITabBarController alloc] init];
+//    self.tabController = [[UITabBarController alloc] init];
+//    
+//    //初始化左边视图
+//    ViewController *viewLeft=[[ViewController alloc] init];
+//    viewLeft.view.backgroundColor=[UIColor whiteColor];
+//    viewLeft.title=@"搜索";
+//    
+//    //初始化右边视图
+//    ScanViewController *viewRight = [[ScanViewController alloc] init];
+//    viewRight.title=@"扫一扫";
+//    UIImage *cameraIcon = [[UIImage imageNamed:@"Camera"] imageWithRenderingMode:UIImageRenderingModeAutomatic];
+//    UITabBarItem *rightTabItem=[[UITabBarItem alloc] initWithTitle:@"扫一扫" image:cameraIcon tag:2];
+//    viewRight.tabBarItem=rightTabItem;
+//
+//    //分别管理两个不同的栈
+//    UINavigationController *naviFirst = [[UINavigationController alloc] initWithRootViewController:viewLeft];
+//    UINavigationController *naviSecond = [[UINavigationController alloc] initWithRootViewController:viewRight];
+//    self.tabController.viewControllers = @[naviSecond, naviFirst];
+//    self.window.rootViewController = self.tabController;
     
-    //初始化左边视图
-    ViewController *viewLeft=[[ViewController alloc] init];
-    viewLeft.view.backgroundColor=[UIColor whiteColor];
-    viewLeft.title=@"搜索";
-    
-    //初始化右边视图
-    ScanViewController *viewRight = [[ScanViewController alloc] init];
-    viewRight.title=@"扫一扫";
-    UIImage *cameraIcon = [[UIImage imageNamed:@"Camera"] imageWithRenderingMode:UIImageRenderingModeAutomatic];
-    UITabBarItem *rightTabItem=[[UITabBarItem alloc] initWithTitle:@"扫一扫" image:cameraIcon tag:2];
-    viewRight.tabBarItem=rightTabItem;
-
-    //分别管理两个不同的栈
-    UINavigationController *naviFirst = [[UINavigationController alloc] initWithRootViewController:viewLeft];
-    UINavigationController *naviSecond = [[UINavigationController alloc] initWithRootViewController:viewRight];
-    self.tabController.viewControllers = @[naviSecond, naviFirst];
-    self.window.rootViewController = self.tabController;
+    WelcomeViewController *we = [[WelcomeViewController alloc] init];
+    self.window.rootViewController = we;
 
     return YES;
 }
