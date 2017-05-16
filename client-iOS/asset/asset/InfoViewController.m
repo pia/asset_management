@@ -65,6 +65,10 @@
     return _titleArray.count;
 }
 
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
+    return @"此次查询到的结果：";
+}
+
 -(UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     NSString *strTitle=@"title";
     //尝试获得可复用的单元格,如果没得到，则返回nil
