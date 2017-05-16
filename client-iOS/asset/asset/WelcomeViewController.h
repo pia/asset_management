@@ -8,12 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface WelcomeViewController : UIViewController<UITextFieldDelegate>{
-    UITextField *_passwordInput;
-    UITextField *_usrInput;
-}
+typedef NS_ENUM(NSInteger, JxbLoginShowType) {
+    JxbLoginShowType_NONE,
+    JxbLoginShowType_USER,
+    JxbLoginShowType_PASS
+};
 
-@property (retain,nonatomic) UITextField *passwordInput;
-@property (retain,nonatomic) UITextField *usrInput;
-
+@interface WelcomeViewController : UIViewController
 @end

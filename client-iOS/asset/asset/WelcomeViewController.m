@@ -1,89 +1,162 @@
 //
-//  WelcomeViewController.m
-//  asset
+//  ViewController.m
+//  JxbLovelyLogin
 //
-//  Created by sure on 16/05/2017.
-//  Copyright © 2017 sun. All rights reserved.
+//  Created by Peter on 15/8/11.
+//  Copyright (c) 2015年 Peter. All rights reserved.
 //
 
 #import "WelcomeViewController.h"
-#import <SDAutoLayout.h>
 
-@interface WelcomeViewController ()
+#define mainSize    [UIScreen mainScreen].bounds.size
 
+#define offsetLeftHand      60
+
+#define rectLeftHand        CGRectMake(61-offsetLeftHand, 90, 40, 65)
+#define rectLeftHandGone    CGRectMake(mainSize.width / 2 - 100, vLogin.frame.origin.y - 22, 40, 40)
+
+#define rectRightHand       CGRectMake(imgLogin.frame.size.width / 2 + 60, 90, 40, 65)
+#define rectRightHandGone   CGRectMake(mainSize.width / 2 + 62, vLogin.frame.origin.y - 22, 40, 40)
+
+@interface WelcomeViewController ()<UITextFieldDelegate>
+{
+    UITextField* txtUser;
+    UITextField* txtPwd;
+    
+    UIImageView* imgLeftHand;
+    UIImageView* imgRightHand;
+    
+    UIImageView* imgLeftHandGone;
+    UIImageView* imgRightHandGone;
+    
+    JxbLoginShowType showType;
+}
 @end
 
 @implementation WelcomeViewController
 
-@synthesize usrInput = _usrInput;
-@synthesize passwordInput = _passwordInput;
-
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor whiteColor];
     
-    //welcome
-    UILabel *welcome = [[UILabel alloc] initWithFrame:CGRectMake(100, 90, 100, 50)];
-    welcome.textColor = [UIColor blackColor];
-    welcome.font = [UIFont systemFontOfSize:30];
-    welcome.textAlignment = NSTextAlignmentCenter;
-    welcome.text = @"欢迎";
-    //welcome.sd_layout.leftSpaceToView(self.view, 33).rightSpaceToView(self.view, 33).topSpaceToView(self.view, 50).heightIs(50);
-    [self.view addSubview:welcome];
+    UIImageView* imgLogin = [[UIImageView alloc] initWithFrame:CGRectMake(mainSize.width / 2 - 211 / 2, 100, 211, 109)];
+    imgLogin.image = [UIImage imageNamed:@"owl-login"];
+    imgLogin.layer.masksToBounds = YES;
+    [self.view addSubview:imgLogin];
     
-    //用户名
-    UILabel *usr = [[UILabel alloc] initWithFrame:CGRectMake(10, 150, 100, 60)];
-    usr.textColor = [UIColor blackColor];
-    usr.font = [UIFont systemFontOfSize:30];
-    usr.text = @"用户名:";
-    [self.view addSubview:usr];
+    imgLeftHand = [[UIImageView alloc] initWithFrame:rectLeftHand];
+    imgLeftHand.image = [UIImage imageNamed:@"owl-login-arm-left"];
+    [imgLogin addSubview:imgLeftHand];
     
-    UITextField *usrInput = [[UITextField alloc] initWithFrame:CGRectMake(120, 150, 200, 60)];
-    self.usrInput.borderStyle=UITextBorderStyleLine;
-    self.usrInput.clearButtonMode =UITextFieldViewModeWhileEditing;
-    self.usrInput.layer.borderColor = [UIColor blackColor].CGColor;
-    self.usrInput.layer.borderWidth = 1;
-    self.usrInput.placeholder = @"请输入用户名";
-    self.usrInput.delegate = self;
-    [self.view addSubview:usrInput];
-
-    //用户密码
-    UILabel *password = [[UILabel alloc] initWithFrame:CGRectMake(10, 250, 100, 60)];
-    password.textColor = [UIColor blackColor];
-    password.font = [UIFont systemFontOfSize:30];
-    password.text = @"密码:";
-    [self.view addSubview:password];
+    imgRightHand = [[UIImageView alloc] initWithFrame:rectRightHand];
+    imgRightHand.image = [UIImage imageNamed:@"owl-login-arm-right"];
+    [imgLogin addSubview:imgRightHand];
     
-    UITextField *passwordInput = [[UITextField alloc] initWithFrame:CGRectMake(120, 250, 200, 60)];
-    passwordInput.borderStyle=UITextBorderStyleRoundedRect;
-    passwordInput.clearButtonMode =UITextFieldViewModeWhileEditing;
-    passwordInput.layer.borderColor = [UIColor blackColor].CGColor;
-    passwordInput.layer.borderWidth = 1;
-    passwordInput.placeholder = @"请输入密码";
-    [passwordInput setSecureTextEntry:YES];
-    passwordInput.delegate = self;
-    [self.view addSubview:passwordInput];
-
+    UIView* vLogin = [[UIView alloc] initWithFrame:CGRectMake(15, 200, mainSize.width - 30, 160)];
+    vLogin.layer.borderWidth = 0.5;
+    vLogin.layer.borderColor = [[UIColor lightGrayColor] CGColor];
+    vLogin.backgroundColor = [UIColor whiteColor];
+    [self.view addSubview:vLogin];
     
-    //login
-    UIButton *loginBtn = [[UIButton alloc] initWithFrame:CGRectMake(90, 400, 90, 90)];
-    [loginBtn setTitle:@"登陆" forState:UIControlStateNormal];
-    [self.view addSubview:loginBtn];
-    [loginBtn addTarget:self action:@selector(login) forControlEvents:UIControlEventTouchUpInside];
-    [loginBtn setBackgroundColor:[UIColor redColor]];
+    imgLeftHandGone = [[UIImageView alloc] initWithFrame:rectLeftHandGone];
+    imgLeftHandGone.image = [UIImage imageNamed:@"icon_hand"];
+    [self.view addSubview:imgLeftHandGone];
     
-
+    imgRightHandGone = [[UIImageView alloc] initWithFrame:rectRightHandGone];
+    imgRightHandGone.image = [UIImage imageNamed:@"icon_hand"];
+    [self.view addSubview:imgRightHandGone];
+    
+    txtUser = [[UITextField alloc] initWithFrame:CGRectMake(30, 30, vLogin.frame.size.width - 60, 44)];
+    txtUser.delegate = self;
+    txtUser.layer.cornerRadius = 5;
+    txtUser.layer.borderColor = [[UIColor lightGrayColor] CGColor];
+    txtUser.layer.borderWidth = 0.5;
+    txtUser.leftView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 44, 44)];
+    txtUser.leftViewMode = UITextFieldViewModeAlways;
+    UIImageView* imgUser = [[UIImageView alloc] initWithFrame:CGRectMake(11, 11, 22, 22)];
+    imgUser.image = [UIImage imageNamed:@"iconfont-user"];
+    [txtUser.leftView addSubview:imgUser];
+    [vLogin addSubview:txtUser];
+    
+    txtPwd = [[UITextField alloc] initWithFrame:CGRectMake(30, 90, vLogin.frame.size.width - 60, 44)];
+    txtPwd.delegate = self;
+    txtPwd.layer.cornerRadius = 5;
+    txtPwd.layer.borderColor = [[UIColor lightGrayColor] CGColor];
+    txtPwd.layer.borderWidth = 0.5;
+    txtPwd.secureTextEntry = YES;
+    txtPwd.leftView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 44, 44)];
+    txtPwd.leftViewMode = UITextFieldViewModeAlways;
+    UIImageView* imgPwd = [[UIImageView alloc] initWithFrame:CGRectMake(11, 11, 22, 22)];
+    imgPwd.image = [UIImage imageNamed:@"iconfont-password"];
+    [txtPwd.leftView addSubview:imgPwd];
+    [vLogin addSubview:txtPwd];
+    
+    
 }
 
-- (void)login {
-    NSLog(@"the text is %@",_usrInput.text);
-
+- (void)textFieldDidBeginEditing:(UITextField *)textField {
+    if ([textField isEqual:txtUser]) {
+        if (showType != JxbLoginShowType_PASS)
+        {
+            showType = JxbLoginShowType_USER;
+            return;
+        }
+        showType = JxbLoginShowType_USER;
+        [UIView animateWithDuration:0.5 animations:^{
+            imgLeftHand.frame = CGRectMake(imgLeftHand.frame.origin.x - offsetLeftHand, imgLeftHand.frame.origin.y + 30, imgLeftHand.frame.size.width, imgLeftHand.frame.size.height);
+            
+            imgRightHand.frame = CGRectMake(imgRightHand.frame.origin.x + 48, imgRightHand.frame.origin.y + 30, imgRightHand.frame.size.width, imgRightHand.frame.size.height);
+            
+            
+            imgLeftHandGone.frame = CGRectMake(imgLeftHandGone.frame.origin.x - 70, imgLeftHandGone.frame.origin.y, 40, 40);
+            
+            imgRightHandGone.frame = CGRectMake(imgRightHandGone.frame.origin.x + 30, imgRightHandGone.frame.origin.y, 40, 40);
+            
+            
+        } completion:^(BOOL b) {
+        }];
+        
+    }
+    else if ([textField isEqual:txtPwd]) {
+        if (showType == JxbLoginShowType_PASS)
+        {
+            showType = JxbLoginShowType_PASS;
+            return;
+        }
+        showType = JxbLoginShowType_PASS;
+        [UIView animateWithDuration:0.5 animations:^{
+            imgLeftHand.frame = CGRectMake(imgLeftHand.frame.origin.x + offsetLeftHand, imgLeftHand.frame.origin.y - 30, imgLeftHand.frame.size.width, imgLeftHand.frame.size.height);
+            imgRightHand.frame = CGRectMake(imgRightHand.frame.origin.x - 48, imgRightHand.frame.origin.y - 30, imgRightHand.frame.size.width, imgRightHand.frame.size.height);
+            
+            
+            imgLeftHandGone.frame = CGRectMake(imgLeftHandGone.frame.origin.x + 70, imgLeftHandGone.frame.origin.y, 0, 0);
+            
+            imgRightHandGone.frame = CGRectMake(imgRightHandGone.frame.origin.x - 30, imgRightHandGone.frame.origin.y, 0, 0);
+            
+        } completion:^(BOOL b) {
+        }];
+    }
 }
 
-- (BOOL)textFieldShouldEndEditing:(UITextField *)textField{
-    NSLog(@"%@",self.usrInput.text);
-    
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    NSLog(@"usr: %@ , passwd: %@", txtUser.text, txtPwd.text);
+    if ([txtUser isFirstResponder])
+    {
+        [txtPwd becomeFirstResponder];
+        NSLog(@"1-->2");
+        return YES;
+    }
+    if ([txtUser.text  isEqual: @"qwe"] && [txtPwd.text  isEqual: @"qwe"]) {
+        NSLog(@"successs.");
+    }else{
+        //提示框
+        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"提示" message:@"用户名或密码错误!!" preferredStyle:UIAlertControllerStyleAlert];
+        [alert addAction:[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+                            //点击按钮的响应事件；
+                }]];
+        [self presentViewController:alert animated:true completion:nil];
+    }
     return YES;
 }
 
@@ -91,11 +164,5 @@
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
     [self.view endEditing:YES];
 }
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
 
 @end
