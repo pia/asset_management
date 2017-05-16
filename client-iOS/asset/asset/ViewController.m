@@ -73,7 +73,7 @@
             break;
         }
         default:{
-            //把编号传给文件类
+            //把编号传给工具类
             PITool *t = [[PITool alloc] init];
             [t writeToFile:self.assetID];
             

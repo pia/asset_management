@@ -17,6 +17,6 @@
 @property  int orderInt;
 
 - (void)writeToFile:(NSString *)str;    //资产编号
-- (void)getFromFile:(NSString *)order;  //nsdefault中次序
+- (NSString *)getFromFile;              //nsdefault中次序
 
 @end

@@ -16,22 +16,35 @@
 - (void)writeToFile:(NSString *)str {
     NSLog(@"write to file! %@ ===",str);
     
+    //获取次序
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    _orderStr = [defaults stringForKey:@"5"];
     
-    _orderStr = [[NSString alloc] initWithFormat:@"%d",1];
-    int a = [_orderStr intValue];
-    _orderStr = [[NSString alloc] initWithFormat:@"%d",a];
+    //写文件
     [defaults setObject:str forKey:_orderStr];
     [defaults synchronize];
     
-    
+    //更新次序
+    _orderInt = ([_orderStr intValue] + 1)%5;
+    _orderStr = [[NSString alloc] initWithFormat:@"%d",_orderInt];
+    [defaults setObject:_orderStr forKey:@"5"];
 }
 
-- (void)getFromFile:(NSString *)str {
-    NSString *rec;
+- (NSString *)getFromFile {
+    //获取次序
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    rec = [defaults stringForKey:str];
-    NSLog(@"daddy is here: %@",rec);
+    _orderStr = [defaults stringForKey:@"5"];
+    
+    //读文件
+    NSString *result = [[NSString alloc] init];
+    result = [defaults stringForKey:_orderStr];
+    
+    //更新次序
+    _orderInt = ([_orderStr intValue] + 1)%5;
+    _orderStr = [[NSString alloc] initWithFormat:@"%d",_orderInt];
+    [defaults setObject:_orderStr forKey:@"5"];
+    
+    return result;
 }
 
 @end

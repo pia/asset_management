@@ -58,6 +58,11 @@
 }
 
 - (void)goTo3 {
+    //init order
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setObject:@"0" forKey:@"10"];
+    [defaults synchronize];
+    
     HistoryViewController *view3=[[HistoryViewController alloc] init];
     [self.navigationController pushViewController:view3 animated:YES];
 }
