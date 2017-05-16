@@ -8,6 +8,7 @@
 
 #import "ScanViewController.h"
 #import "InfoViewController.h"
+#import "PITool.h"
 
 #define viewHeight self.view.frame.size.height
 #define viewWidth self.view.frame.size.width
@@ -76,6 +77,10 @@
         NSLog(@"%@",metadataObject.stringValue);
         
         //[self.preview removeFromSuperlayer];
+        
+        //把编号传给文件类
+        PITool *t = [[PITool alloc] init];
+        [t writeToFile:metadataObject.stringValue];
         
         //切换视图
         InfoViewController *infoView=[[InfoViewController alloc] init];

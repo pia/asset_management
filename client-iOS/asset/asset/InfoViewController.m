@@ -50,7 +50,7 @@
         _assetUser  = [dic objectForKey:@"assetUser"];
         _assetID = self._text;
         _detail=[NSMutableArray arrayWithObjects:_assetName, _assetID, _assetDate, _assetPlace, _assetPrice, _assetUser, nil];
-        NSLog(@"DETAIL : %@",_detail);
+        //NSLog(@"DETAIL : %@",_detail);
         [_infoTable reloadData];
 
     } failure:^(NSURLSessionTask *operation, NSError *error) {

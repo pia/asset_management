@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import <SDAutoLayout.h>
 #import "InfoViewController.h"
+#import "PITool.h"
 
 @interface ViewController ()
 
@@ -72,6 +73,11 @@
             break;
         }
         default:{
+            //把编号传给文件类
+            PITool *t = [[PITool alloc] init];
+            [t writeToFile:self.assetID];
+            
+            //切换到结果页面
             InfoViewController *infoView=[[InfoViewController alloc] init];
             infoView._text=self.assetID;
             [self.navigationController pushViewController:infoView animated:YES];
