@@ -44,8 +44,8 @@
 //    self.tabController.viewControllers = @[naviSecond, naviFirst];
 //    self.window.rootViewController = self.tabController;
     
-    WelcomeViewController *we = [[WelcomeViewController alloc] init];
-    self.window.rootViewController = we;
+    self.window.rootViewController=[[UINavigationController alloc] initWithRootViewController:[[WelcomeViewController alloc] init]];
+    
 
     return YES;
 }

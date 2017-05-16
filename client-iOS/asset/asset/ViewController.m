@@ -21,6 +21,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    self.view.backgroundColor = [UIColor whiteColor];
 
 #pragma mark tabBar -
     UIImage *searchIcon = [[UIImage imageNamed:@"Search"] imageWithRenderingMode:UIImageRenderingModeAutomatic];
@@ -35,16 +36,36 @@
     self.searchTextbox.keyboardType = UIKeyboardTypeNumberPad;//UIKeyboardTypeNumberPad;
     self.searchTextbox.returnKeyType =UIReturnKeySearch;
     [self.view addSubview:self.searchTextbox];
-    self.searchTextbox.sd_layout.leftSpaceToView(self.view, 33).rightSpaceToView(self.view, 33).centerYEqualToView(self.view).heightIs(50);
+    self.searchTextbox.sd_layout.leftSpaceToView(self.view, 33).rightSpaceToView(self.view, 33).topSpaceToView(self.view, 200).heightIs(50);
     self.searchTextbox.delegate=self;
     
 }
 
 
 - (BOOL)textFieldShouldEndEditing:(UITextField *)textField{
+//    NSLog(@"%@",self.searchTextbox.text);
+//    self.assetID=self.searchTextbox.text;
+////    //TODO 判断是否为其他无关字符
+//    switch (self.assetID.length) {
+//        case 0: {
+//            NSLog(@"用户没有输入");
+//            break;
+//        }
+//        default:{
+//            InfoViewController *infoView=[[InfoViewController alloc] init];
+//            infoView._text=self.assetID;
+//            [self.navigationController pushViewController:infoView animated:YES];
+//        }
+//    }
+
+    
+    return YES;
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
     NSLog(@"%@",self.searchTextbox.text);
     self.assetID=self.searchTextbox.text;
-//    //TODO 判断是否为其他无关字符
+    //    //TODO 判断是否为其他无关字符
     switch (self.assetID.length) {
         case 0: {
             NSLog(@"用户没有输入");
@@ -56,14 +77,13 @@
             [self.navigationController pushViewController:infoView animated:YES];
         }
     }
-
-    
     return YES;
 }
 
 //点屏幕空白处收回键盘 | 开始搜索
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
-    [self.searchTextbox resignFirstResponder];
+    //[self.searchTextbox resignFirstResponder];
+    [self.view endEditing:YES];
     //[self.tabBarController ]
 }
 

@@ -7,6 +7,7 @@
 //
 
 #import "WelcomeViewController.h"
+#import "FunctionViewController.h"
 
 #define mainSize    [UIScreen mainScreen].bounds.size
 
@@ -140,15 +141,18 @@
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
 {
-    NSLog(@"usr: %@ , passwd: %@", txtUser.text, txtPwd.text);
+    //NSLog(@"usr: %@ , passwd: %@", txtUser.text, txtPwd.text);
     if ([txtUser isFirstResponder])
     {
         [txtPwd becomeFirstResponder];
         NSLog(@"1-->2");
         return YES;
     }
-    if ([txtUser.text  isEqual: @"qwe"] && [txtPwd.text  isEqual: @"qwe"]) {
+    if ([txtUser.text  isEqual: @"q"] && [txtPwd.text  isEqual: @"q"]) {
+        //登录成功
         NSLog(@"successs.");
+        FunctionViewController *funtionView=[[FunctionViewController alloc] init];
+        [self.navigationController pushViewController:funtionView animated:YES];
     }else{
         //提示框
         UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"提示" message:@"用户名或密码错误!!" preferredStyle:UIAlertControllerStyleAlert];
