@@ -10,6 +10,7 @@
 #import "ViewController.h"
 #import "ScanViewController.h"
 #import "WelcomeViewController.h"
+#import <FlatUIKit.h>
 
 
 @interface AppDelegate ()
@@ -45,6 +46,9 @@
 //    self.window.rootViewController = self.tabController;
     
     self.window.rootViewController=[[UINavigationController alloc] initWithRootViewController:[[WelcomeViewController alloc] init]];
+    [UIBarButtonItem configureFlatButtonsWithColor:[UIColor peterRiverColor]
+                                  highlightedColor:[UIColor belizeHoleColor]
+                                      cornerRadius:3];
     
 
     return YES;

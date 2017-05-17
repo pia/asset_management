@@ -23,6 +23,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.view.backgroundColor=[UIColor whiteColor];
+        self.title=@"扫码查询";
     //执行开始扫描方法
     [self startReading];
 
