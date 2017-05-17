@@ -8,6 +8,7 @@
 
 #import "WelcomeViewController.h"
 #import "FunctionViewController.h"
+#import <FlatUIKit.h>
 
 #define mainSize    [UIScreen mainScreen].bounds.size
 
@@ -155,11 +156,21 @@
         [self.navigationController pushViewController:funtionView animated:YES];
     }else{
         //提示框
-        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"提示" message:@"用户名或密码错误!!" preferredStyle:UIAlertControllerStyleAlert];
-        [alert addAction:[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-                            //点击按钮的响应事件；
-                }]];
-        [self presentViewController:alert animated:true completion:nil];
+        FUIAlertView *alertView = [[FUIAlertView alloc] initWithTitle:@"提示"
+                                                              message:@"密码或用户名不对"
+                                                             delegate:nil cancelButtonTitle:@"关闭"
+                                                    otherButtonTitles: nil];
+        alertView.titleLabel.textColor = [UIColor cloudsColor];
+        alertView.titleLabel.font = [UIFont boldFlatFontOfSize:16];
+        alertView.messageLabel.textColor = [UIColor cloudsColor];
+        alertView.messageLabel.font = [UIFont flatFontOfSize:14];
+        alertView.backgroundOverlay.backgroundColor = [[UIColor cloudsColor] colorWithAlphaComponent:0.8];
+        alertView.alertContainer.backgroundColor = [UIColor midnightBlueColor];
+        alertView.defaultButtonColor = [UIColor cloudsColor];
+        alertView.defaultButtonShadowColor = [UIColor asbestosColor];
+        alertView.defaultButtonFont = [UIFont boldFlatFontOfSize:16];
+        alertView.defaultButtonTitleColor = [UIColor asbestosColor];
+        [alertView show];
     }
     return YES;
 }
