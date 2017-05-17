@@ -41,7 +41,7 @@
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
     
-    UIImageView* imgLogin = [[UIImageView alloc] initWithFrame:CGRectMake(mainSize.width / 2 - 211 / 2, 100, 211, 109)];
+    UIImageView* imgLogin = [[UIImageView alloc] initWithFrame:CGRectMake(mainSize.width / 2 - 211 / 2, 100 -30, 211, 109)];//
     imgLogin.image = [UIImage imageNamed:@"owl-login"];
     imgLogin.layer.masksToBounds = YES;
     [self.view addSubview:imgLogin];
@@ -54,7 +54,7 @@
     imgRightHand.image = [UIImage imageNamed:@"owl-login-arm-right"];
     [imgLogin addSubview:imgRightHand];
     
-    UIView* vLogin = [[UIView alloc] initWithFrame:CGRectMake(15, 200, mainSize.width - 30, 160)];
+    UIView* vLogin = [[UIView alloc] initWithFrame:CGRectMake(15, 200 -30, mainSize.width - 30, 160)];//
     vLogin.layer.borderWidth = 0.5;
     vLogin.layer.borderColor = [[UIColor lightGrayColor] CGColor];
     vLogin.backgroundColor = [UIColor whiteColor];

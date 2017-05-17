@@ -39,7 +39,7 @@
     [scanBtn setTitleColor:[UIColor cloudsColor] forState:UIControlStateNormal];
     [scanBtn setTitleColor:[UIColor cloudsColor] forState:UIControlStateHighlighted];
     [self.view addSubview:scanBtn];
-    scanBtn.sd_layout.topSpaceToView(self.view, 100).heightIs(50).leftSpaceToView(self.view, 50).rightSpaceToView(self.view, 50);
+    scanBtn.sd_layout.topSpaceToView(self.view, 80).heightIs(50).leftSpaceToView(self.view, 50).rightSpaceToView(self.view, 50);
     [scanBtn addTarget:self action:@selector(goTo1) forControlEvents:UIControlEventTouchDown];
     
     FUIButton *manualBtn = [[FUIButton alloc] initWithFrame:CGRectMake(90, 200, 100, 60)];
