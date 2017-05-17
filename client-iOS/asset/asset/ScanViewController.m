@@ -1,6 +1,6 @@
 //
 //  ScanViewController.m
-//  asset
+//  扫码查询
 //
 //  Created by pia on 10/04/2017.
 //  Copyright © 2017 pia. All rights reserved.

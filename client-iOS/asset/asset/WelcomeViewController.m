@@ -1,6 +1,6 @@
 //
 //  ViewController.m
-//  JxbLovelyLogin
+//  登录／欢迎界面
 //
 //  Created by Peter on 15/8/11.
 //  Copyright (c) 2015年 Peter. All rights reserved.

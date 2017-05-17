@@ -1,6 +1,6 @@
 //
 //  ViewController.m
-//  asset
+//  手动查询
 //
 //  Created by pia on 09/02/2017.
 //  Copyright © 2017 pia. All rights reserved.
@@ -10,6 +10,8 @@
 #import <SDAutoLayout.h>
 #import "InfoViewController.h"
 #import "PITool.h"
+#import <FlatUIKit.h>
+#import <FlatUIKit/UIColor+FlatUI.h>
 
 @interface ViewController ()
 
@@ -22,7 +24,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    self.view.backgroundColor = [UIColor whiteColor];
+    self.view.backgroundColor = [UIColor turquoiseColor];
 
 #pragma mark tabBar -
     UIImage *searchIcon = [[UIImage imageNamed:@"Search"] imageWithRenderingMode:UIImageRenderingModeAutomatic];
@@ -30,8 +32,19 @@
     self.tabBarItem=leftTabItem;
     
 #pragma mark searchField -
-    self.searchTextbox=[[UITextField alloc] initWithFrame:CGRectMake(0, 0, 0, 0)];
-    self.searchTextbox.borderStyle=UITextBorderStyleRoundedRect;
+    
+    self.searchTextbox=[[FUITextField alloc] initWithFrame:CGRectMake(0, 0, 0, 0)];
+    
+    self.searchTextbox.font = [UIFont flatFontOfSize:16];
+    self.searchTextbox.backgroundColor = [UIColor clearColor];
+    self.searchTextbox.edgeInsets = UIEdgeInsetsMake(4.0f, 15.0f, 4.0f, 15.0f);
+    self.searchTextbox.textFieldColor = [UIColor whiteColor];
+    self.searchTextbox.borderColor = [UIColor turquoiseColor];
+    self.searchTextbox.borderWidth = 2.0f;
+    self.searchTextbox.cornerRadius = 3.0f;
+    
+    
+    //self.searchTextbox.borderStyle=UITextBorderStyleRoundedRect;
     self.searchTextbox.clearButtonMode =UITextFieldViewModeWhileEditing;
     self.searchTextbox.placeholder = @"请输入编号....";
     self.searchTextbox.keyboardType = UIKeyboardTypeNumberPad;//UIKeyboardTypeNumberPad;

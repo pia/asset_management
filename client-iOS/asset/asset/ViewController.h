@@ -8,12 +8,13 @@
 
 
 #import <UIKit/UIKit.h>
+#import <FlatUIKit.h>
 
 @interface ViewController : UIViewController<UITextFieldDelegate>{
-    UITextField *_searchTextbox;
+    FUITextField *_searchTextbox;
 }
 
-@property (retain,nonatomic) UITextField *searchTextbox;
+@property (retain,nonatomic) FUITextField *searchTextbox;
 @property (copy,nonatomic) NSString *assetID;
 
 @end

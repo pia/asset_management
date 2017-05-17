@@ -1,6 +1,6 @@
 //
 //  FunctionViewController.m
-//  asset
+//  功能列表
 //
 //  Created by sure on 16/05/2017.
 //  Copyright © 2017 sun. All rights reserved.
