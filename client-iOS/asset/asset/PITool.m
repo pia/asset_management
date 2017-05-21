@@ -47,4 +47,9 @@
     return result;
 }
 
+- (void)copyToPasteboard:(NSString *)text {
+    UIPasteboard *pasteboard = [UIPasteboard generalPasteboard];
+    [pasteboard setString:text];
+}
+
 @end

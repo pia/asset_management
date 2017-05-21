@@ -41,7 +41,7 @@
     //创建输出流
     AVCaptureMetadataOutput *output = [[AVCaptureMetadataOutput alloc] init];
     //设置扫描感应区域
-    [output setRectOfInterest:CGRectMake((viewHeight-viewWidth)/2/viewHeight, 0, viewWidth/viewHeight, 1)];
+    //[output setRectOfInterest:CGRectMake((viewHeight-viewWidth)/2/viewHeight, 0, viewWidth/viewHeight, 1)];
     //设置代理，在主线程里刷新
     [output setMetadataObjectsDelegate:self queue:dispatch_get_main_queue()];
     //初始化连接对象

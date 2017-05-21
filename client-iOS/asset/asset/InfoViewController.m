@@ -8,6 +8,7 @@
 
 #import "InfoViewController.h"
 #import "AFHTTPSessionManager.h"
+#import "PITool.h"
 
 @interface InfoViewController ()
 
@@ -24,6 +25,10 @@
     NSString *URLString = @"http://52.199.159.200:5000/asset/";
     URLString = [[URLString stringByAppendingString:self._text] stringByAppendingString:@".json"];
     //NSLog(@"URLString : %@",URLString);
+    
+    //复制到剪切板
+    PITool *p = [[PITool alloc] init];
+    [p copyToPasteboard:self._text];
     
     //表格--->
     _infoTable=[[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStyleGrouped];

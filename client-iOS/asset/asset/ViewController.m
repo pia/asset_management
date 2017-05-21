@@ -51,7 +51,7 @@
     self.searchTextbox.keyboardType = UIKeyboardTypeNumberPad;//UIKeyboardTypeNumberPad;
     self.searchTextbox.returnKeyType =UIReturnKeySearch;
     [self.view addSubview:self.searchTextbox];
-    self.searchTextbox.sd_layout.leftSpaceToView(self.view, 33).rightSpaceToView(self.view, 33).topSpaceToView(self.view, 200).heightIs(50);
+    self.searchTextbox.sd_layout.leftSpaceToView(self.view, 33).rightSpaceToView(self.view, 33).topSpaceToView(self.view, 170).heightIs(50);
     self.searchTextbox.delegate=self;
     
 }

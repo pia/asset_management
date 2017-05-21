@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 @interface PITool : NSObject {
     int _orderInt;
@@ -18,5 +19,6 @@
 
 - (void)writeToFile:(NSString *)str;    //资产编号
 - (NSString *)getFromFile;              //nsdefault中次序
+- (void)copyToPasteboard:(NSString *)text;
 
 @end
