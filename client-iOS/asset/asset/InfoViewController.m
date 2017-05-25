@@ -40,7 +40,7 @@
     _infoTable.tableHeaderView=nil;
     [self.view addSubview:_infoTable];
     
-    _titleArray=[NSArray arrayWithObjects:@"资产名称",@"资产编号",@"购置日期",@"存放地点",@"总价",@"使用人", nil];
+    _titleArray=[NSArray arrayWithObjects:@"资产名称",@"资产编号",@"购置日期",@"存放地点",@"总价",@"使用人",@"现状",@"资产状态",@"生产厂家",@"出厂编号",@"型号",@"规格",@"使用部门", nil];
     _detail=[[NSMutableArray alloc] init];
     
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
@@ -54,7 +54,14 @@
         _assetPrice = [dic objectForKey:@"assetPrice"];
         _assetUser  = [dic objectForKey:@"assetUser"];
         _assetID = self._text;
-        _detail=[NSMutableArray arrayWithObjects:_assetName, _assetID, _assetDate, _assetPlace, _assetPrice, _assetUser, nil];
+        _var7 = [dic objectForKey:@"currentStatus"];
+        _var8 = [dic objectForKey:@"assetStatus"];
+        _var9 = [dic objectForKey:@"manufacturer"];
+        _var10 = [dic objectForKey:@"serialNumber"];
+        _var11 = [dic objectForKey:@"model"];
+        _var12 = [dic objectForKey:@"specification"];
+        _var13 = [dic objectForKey:@"department"];
+        _detail=[NSMutableArray arrayWithObjects:_assetName, _assetID, _assetDate, _assetPlace, _assetPrice, _assetUser, _var7, _var8, _var9, _var10, _var11, _var12, _var13, nil];
         //NSLog(@"DETAIL : %@",_detail);
         [_infoTable reloadData];
 
@@ -62,7 +69,7 @@
         NSLog(@"Error: %@", error);
     }];
 
-    _detail=[NSMutableArray arrayWithObjects:@"没找到",@"没找到",@"没找到",@"没找到",@"没找到",@"没找到", nil];
+    _detail=[NSMutableArray arrayWithObjects:@"没找到",@"没找到",@"没找到",@"没找到",@"没找到",@"没找到",@"没找到",@"没找到",@"没找到",@"没找到",@"没找到",@"没找到",@"没找到", nil];
     [_infoTable reloadData];
 }
 

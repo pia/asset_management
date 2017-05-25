@@ -23,5 +23,13 @@
 @property (nonatomic, strong) NSString *assetPlace;          //存放地点
 @property (nonatomic, strong) NSString *assetPrice;          //总价
 @property (nonatomic, strong) NSString *assetUser;           //使用人
+//---
+@property (nonatomic, strong) NSString *var7;           //现状
+@property (nonatomic, strong) NSString *var8;           //资产状态
+@property (nonatomic, strong) NSString *var9;           //生产厂家
+@property (nonatomic, strong) NSString *var10;          //出厂编号
+@property (nonatomic, strong) NSString *var11;          //型号
+@property (nonatomic, strong) NSString *var12;          //规格
+@property (nonatomic, strong) NSString *var13;          //使用管理部门
 
 @end
